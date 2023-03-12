@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.1](https://github.com/googleapis/google-cloud-node/compare/ids-v2.2.0...ids-v2.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3988](https://github.com/googleapis/google-cloud-node/issues/3988)) ([f2134ed](https://github.com/googleapis/google-cloud-node/commit/f2134ed5f166a3bb7dd0bed556700f0b0fd9756a))
+
+## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/ids-v2.1.2...ids-v2.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [2.1.2](https://github.com/googleapis/nodejs-ids/compare/v2.1.1...v2.1.2) (2022-11-11)
 
 

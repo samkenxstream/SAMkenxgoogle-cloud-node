@@ -359,7 +359,8 @@ export class AdaptationClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The parent resource where this phrase set will be created. Format:
+   *   Required. The parent resource where this phrase set will be created.
+   *   Format:
    *
    *   `projects/{project}/locations/{location}/phraseSets`
    *
@@ -379,7 +380,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [PhraseSet]{@link google.cloud.speech.v1p1beta1.PhraseSet}.
+   *   The first element of the array is an object representing {@link google.cloud.speech.v1p1beta1.PhraseSet | PhraseSet}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -478,7 +479,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [PhraseSet]{@link google.cloud.speech.v1p1beta1.PhraseSet}.
+   *   The first element of the array is an object representing {@link google.cloud.speech.v1p1beta1.PhraseSet | PhraseSet}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -582,7 +583,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [PhraseSet]{@link google.cloud.speech.v1p1beta1.PhraseSet}.
+   *   The first element of the array is an object representing {@link google.cloud.speech.v1p1beta1.PhraseSet | PhraseSet}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -675,7 +676,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The first element of the array is an object representing {@link google.protobuf.Empty | Empty}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -762,7 +763,8 @@ export class AdaptationClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The parent resource where this custom class will be created. Format:
+   *   Required. The parent resource where this custom class will be created.
+   *   Format:
    *
    *   `projects/{project}/locations/{location}/customClasses`
    *
@@ -782,7 +784,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [CustomClass]{@link google.cloud.speech.v1p1beta1.CustomClass}.
+   *   The first element of the array is an object representing {@link google.cloud.speech.v1p1beta1.CustomClass | CustomClass}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -881,7 +883,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [CustomClass]{@link google.cloud.speech.v1p1beta1.CustomClass}.
+   *   The first element of the array is an object representing {@link google.cloud.speech.v1p1beta1.CustomClass | CustomClass}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -985,7 +987,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [CustomClass]{@link google.cloud.speech.v1p1beta1.CustomClass}.
+   *   The first element of the array is an object representing {@link google.cloud.speech.v1p1beta1.CustomClass | CustomClass}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1090,7 +1092,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The first element of the array is an object representing {@link google.protobuf.Empty | Empty}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1207,7 +1209,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [PhraseSet]{@link google.cloud.speech.v1p1beta1.PhraseSet}.
+   *   The first element of the array is Array of {@link google.cloud.speech.v1p1beta1.PhraseSet | PhraseSet}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1320,7 +1322,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [PhraseSet]{@link google.cloud.speech.v1p1beta1.PhraseSet} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.speech.v1p1beta1.PhraseSet | PhraseSet} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listPhraseSetAsync()`
@@ -1383,7 +1385,7 @@ export class AdaptationClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [PhraseSet]{@link google.cloud.speech.v1p1beta1.PhraseSet}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.speech.v1p1beta1.PhraseSet | PhraseSet}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1441,7 +1443,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [CustomClass]{@link google.cloud.speech.v1p1beta1.CustomClass}.
+   *   The first element of the array is Array of {@link google.cloud.speech.v1p1beta1.CustomClass | CustomClass}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1554,7 +1556,7 @@ export class AdaptationClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [CustomClass]{@link google.cloud.speech.v1p1beta1.CustomClass} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.speech.v1p1beta1.CustomClass | CustomClass} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listCustomClassesAsync()`
@@ -1617,7 +1619,7 @@ export class AdaptationClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [CustomClass]{@link google.cloud.speech.v1p1beta1.CustomClass}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.speech.v1p1beta1.CustomClass | CustomClass}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)

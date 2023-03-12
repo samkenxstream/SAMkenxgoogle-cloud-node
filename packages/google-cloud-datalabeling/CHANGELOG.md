@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/datalabeling?activeTab=versions
 
+## [3.2.1](https://github.com/googleapis/google-cloud-node/compare/datalabeling-v3.2.0...datalabeling-v3.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3986](https://github.com/googleapis/google-cloud-node/issues/3986)) ([20f493c](https://github.com/googleapis/google-cloud-node/commit/20f493c94f7d6626d932b2610e00cbdd5df55f22))
+
+## [3.2.0](https://github.com/googleapis/google-cloud-node/compare/datalabeling-v3.1.1...datalabeling-v3.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [3.1.1](https://github.com/googleapis/nodejs-datalabeling/compare/v3.1.0...v3.1.1) (2022-11-11)
 
 

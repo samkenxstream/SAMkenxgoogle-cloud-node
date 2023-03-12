@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/grafeas?activeTab=versions
 
+## [4.3.0](https://github.com/googleapis/google-cloud-node/compare/grafeas-v4.2.2...grafeas-v4.3.0) (2023-03-06)
+
+
+### Features
+
+* [grafeas] Import of Grafeas from Github ([#4049](https://github.com/googleapis/google-cloud-node/issues/4049)) ([146700d](https://github.com/googleapis/google-cloud-node/commit/146700d2fa0d5ee8fc7a262700e0819b50ede21c))
+
+## [4.2.2](https://github.com/googleapis/google-cloud-node/compare/grafeas-v4.2.1...grafeas-v4.2.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3991](https://github.com/googleapis/google-cloud-node/issues/3991)) ([c6326d9](https://github.com/googleapis/google-cloud-node/commit/c6326d90abb9b649b25052e4afe7b3eb0f65bcb4))
+
 ## [4.2.1](https://github.com/googleapis/nodejs-grafeas/compare/v4.2.0...v4.2.1) (2022-11-10)
 
 

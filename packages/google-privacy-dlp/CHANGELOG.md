@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/PACKAGE NAME?activeTab=versions
 
+## [4.4.1](https://github.com/googleapis/google-cloud-node/compare/dlp-v4.4.0...dlp-v4.4.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3991](https://github.com/googleapis/google-cloud-node/issues/3991)) ([c6326d9](https://github.com/googleapis/google-cloud-node/commit/c6326d90abb9b649b25052e4afe7b3eb0f65bcb4))
+
+## [4.4.0](https://github.com/googleapis/google-cloud-node/compare/dlp-v4.3.0...dlp-v4.4.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3854](https://github.com/googleapis/google-cloud-node/issues/3854)) ([9e4b7f8](https://github.com/googleapis/google-cloud-node/commit/9e4b7f8d27dbb1ac011267f9b96ce90d2ff7a74b))
+
 ## [4.3.0](https://github.com/googleapis/nodejs-dlp/compare/v4.2.0...v4.3.0) (2023-01-06)
 
 

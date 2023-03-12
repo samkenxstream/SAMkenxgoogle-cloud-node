@@ -365,7 +365,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Job]{@link google.cloud.video.transcoder.v1.Job}.
+   *   The first element of the array is an object representing {@link google.cloud.video.transcoder.v1.Job | Job}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -457,7 +457,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Job]{@link google.cloud.video.transcoder.v1.Job}.
+   *   The first element of the array is an object representing {@link google.cloud.video.transcoder.v1.Job | Job}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -546,7 +546,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The first element of the array is an object representing {@link google.protobuf.Empty | Empty}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -638,15 +638,15 @@ export class TranscoderServiceClient {
    * @param {google.cloud.video.transcoder.v1.JobTemplate} request.jobTemplate
    *   Required. Parameters for creating job template.
    * @param {string} request.jobTemplateId
-   *   Required. The ID to use for the job template, which will become the final component
-   *   of the job template's resource name.
+   *   Required. The ID to use for the job template, which will become the final
+   *   component of the job template's resource name.
    *
    *   This value should be 4-63 characters, and valid characters must match the
    *   regular expression `{@link a-zA-Z0-9_-|a-zA-Z}*`.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [JobTemplate]{@link google.cloud.video.transcoder.v1.JobTemplate}.
+   *   The first element of the array is an object representing {@link google.cloud.video.transcoder.v1.JobTemplate | JobTemplate}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -745,7 +745,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [JobTemplate]{@link google.cloud.video.transcoder.v1.JobTemplate}.
+   *   The first element of the array is an object representing {@link google.cloud.video.transcoder.v1.JobTemplate | JobTemplate}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -846,7 +846,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The first element of the array is an object representing {@link google.protobuf.Empty | Empty}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -955,7 +955,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [Job]{@link google.cloud.video.transcoder.v1.Job}.
+   *   The first element of the array is Array of {@link google.cloud.video.transcoder.v1.Job | Job}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1060,7 +1060,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [Job]{@link google.cloud.video.transcoder.v1.Job} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.video.transcoder.v1.Job | Job} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listJobsAsync()`
@@ -1115,7 +1115,7 @@ export class TranscoderServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Job]{@link google.cloud.video.transcoder.v1.Job}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.video.transcoder.v1.Job | Job}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1150,8 +1150,8 @@ export class TranscoderServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The parent location from which to retrieve the collection of job templates.
-   *   Format: `projects/{project}/locations/{location}`
+   *   Required. The parent location from which to retrieve the collection of job
+   *   templates. Format: `projects/{project}/locations/{location}`
    * @param {number} request.pageSize
    *   The maximum number of items to return.
    * @param {string} request.pageToken
@@ -1166,7 +1166,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [JobTemplate]{@link google.cloud.video.transcoder.v1.JobTemplate}.
+   *   The first element of the array is Array of {@link google.cloud.video.transcoder.v1.JobTemplate | JobTemplate}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1256,8 +1256,8 @@ export class TranscoderServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The parent location from which to retrieve the collection of job templates.
-   *   Format: `projects/{project}/locations/{location}`
+   *   Required. The parent location from which to retrieve the collection of job
+   *   templates. Format: `projects/{project}/locations/{location}`
    * @param {number} request.pageSize
    *   The maximum number of items to return.
    * @param {string} request.pageToken
@@ -1272,7 +1272,7 @@ export class TranscoderServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [JobTemplate]{@link google.cloud.video.transcoder.v1.JobTemplate} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.video.transcoder.v1.JobTemplate | JobTemplate} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listJobTemplatesAsync()`
@@ -1310,8 +1310,8 @@ export class TranscoderServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The parent location from which to retrieve the collection of job templates.
-   *   Format: `projects/{project}/locations/{location}`
+   *   Required. The parent location from which to retrieve the collection of job
+   *   templates. Format: `projects/{project}/locations/{location}`
    * @param {number} request.pageSize
    *   The maximum number of items to return.
    * @param {string} request.pageToken
@@ -1328,7 +1328,7 @@ export class TranscoderServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [JobTemplate]{@link google.cloud.video.transcoder.v1.JobTemplate}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.video.transcoder.v1.JobTemplate | JobTemplate}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)

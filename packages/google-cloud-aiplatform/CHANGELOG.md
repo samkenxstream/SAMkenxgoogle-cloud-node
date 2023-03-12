@@ -1,5 +1,45 @@
 # Changelog
 
+## [2.8.0](https://github.com/googleapis/google-cloud-node/compare/aiplatform-v2.7.0...aiplatform-v2.8.0) (2023-03-06)
+
+
+### Features
+
+* Add disable_container_logging to BatchPredictionJob in aiplatform v1,v1beta1 batch_prediction_job.proto ([#4052](https://github.com/googleapis/google-cloud-node/issues/4052)) ([735af33](https://github.com/googleapis/google-cloud-node/commit/735af33f8c5548118e0df774f08f89cc657445ef))
+
+## [2.7.0](https://github.com/googleapis/google-cloud-node/compare/aiplatform-v2.6.1...aiplatform-v2.7.0) (2023-02-22)
+
+
+### Features
+
+* Add match service in aiplatform v1beta1 match_service.proto ([#4002](https://github.com/googleapis/google-cloud-node/issues/4002)) ([e2944f5](https://github.com/googleapis/google-cloud-node/commit/e2944f565b39ae151e11f938fb9dcbefd337880e))
+
+## [2.6.1](https://github.com/googleapis/google-cloud-node/compare/aiplatform-v2.6.0...aiplatform-v2.6.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3985](https://github.com/googleapis/google-cloud-node/issues/3985)) ([fb2a6fd](https://github.com/googleapis/google-cloud-node/commit/fb2a6fdbd9dcf2ae91b3767629d71f0970d0712c))
+
+## [2.6.0](https://github.com/googleapis/google-cloud-node/compare/aiplatform-v2.5.0...aiplatform-v2.6.0) (2023-02-09)
+
+
+### Features
+
+* [ai-platform] add service_networking.proto to aiplatform v1 ([#3937](https://github.com/googleapis/google-cloud-node/issues/3937)) ([fcaacbc](https://github.com/googleapis/google-cloud-node/commit/fcaacbc8060ec8eb750d283dc17febe9fb0f2cd8))
+
+## [2.5.0](https://github.com/googleapis/google-cloud-node/compare/aiplatform-v2.4.0...aiplatform-v2.5.0) (2023-01-28)
+
+
+### Features
+
+* Add enable_dashboard_access in aiplatform v1 and v1beta1 ([#460](https://github.com/googleapis/google-cloud-node/issues/460)) ([58d9da5](https://github.com/googleapis/google-cloud-node/commit/58d9da5b38285ea729c7dcbfb28940265751ac21))
+
+
+### Bug Fixes
+
+* Removing migrated samples (to nodejs-docs-samples) from repo ([#555](https://github.com/googleapis/google-cloud-node/issues/555)) ([c97bb20](https://github.com/googleapis/google-cloud-node/commit/c97bb20334af2f1d469e8fcdd2cc01fe7182d64f))
+
 ## [2.4.0](https://github.com/googleapis/nodejs-ai-platform/compare/v2.3.0...v2.4.0) (2023-01-25)
 
 

@@ -10,7 +10,7 @@
                   "options": {
                     "cc_enable_arenas": true,
                     "csharp_namespace": "Google.Cloud.Translate.V3",
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/translate/v3;translate",
+                    "go_package": "cloud.google.com/go/translation/apiv3/translationpb;translationpb",
                     "java_multiple_files": true,
                     "java_outer_classname": "TranslationServiceProto",
                     "java_package": "com.google.cloud.translate.v3",
@@ -663,6 +663,27 @@
                           "options": {
                             "(google.api.field_behavior)": "OPTIONAL"
                           }
+                        },
+                        "customizedAttribution": {
+                          "type": "string",
+                          "id": 10,
+                          "options": {
+                            "(google.api.field_behavior)": "OPTIONAL"
+                          }
+                        },
+                        "isTranslateNativePdfOnly": {
+                          "type": "bool",
+                          "id": 11,
+                          "options": {
+                            "(google.api.field_behavior)": "OPTIONAL"
+                          }
+                        },
+                        "enableShadowRemovalNativePdf": {
+                          "type": "bool",
+                          "id": 12,
+                          "options": {
+                            "(google.api.field_behavior)": "OPTIONAL"
+                          }
                         }
                       }
                     },
@@ -896,6 +917,13 @@
                           "id": 8,
                           "options": {
                             "(google.api.field_behavior)": "OUTPUT_ONLY"
+                          }
+                        },
+                        "displayName": {
+                          "type": "string",
+                          "id": 9,
+                          "options": {
+                            "(google.api.field_behavior)": "OPTIONAL"
                           }
                         }
                       },
@@ -1147,6 +1175,13 @@
                           "options": {
                             "(google.api.field_behavior)": "OPTIONAL"
                           }
+                        },
+                        "customizedAttribution": {
+                          "type": "string",
+                          "id": 10,
+                          "options": {
+                            "(google.api.field_behavior)": "OPTIONAL"
+                          }
                         }
                       }
                     },
@@ -1286,7 +1321,7 @@
                   "options": {
                     "cc_enable_arenas": true,
                     "csharp_namespace": "Google.Cloud.Translate.V3Beta1",
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/translate/v3beta1;translate",
+                    "go_package": "cloud.google.com/go/translation/apiv3beta1/translationpb;translationpb",
                     "java_multiple_files": true,
                     "java_outer_classname": "TranslationServiceProto",
                     "java_package": "com.google.cloud.translate.v3beta1",

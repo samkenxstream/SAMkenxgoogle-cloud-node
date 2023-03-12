@@ -12,10 +12,10 @@
   "repository": "googleapis/nodejs-iot",
   "private": true,
   "scripts": {
-    "test": "mocha test"
+    "test": "echo tests deprecated"
   },
   "dependencies": {
-    "@google-cloud/iot": "^3.1.2",
+    "@google-cloud/iot": "^3.2.1",
     "@google-cloud/pubsub": "^3.0.0",
     "@google-cloud/storage": "^6.0.0"
   },

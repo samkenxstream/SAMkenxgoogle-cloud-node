@@ -8,7 +8,7 @@
               "nested": {
                 "v1": {
                   "options": {
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/tpu/v1;tpu",
+                    "go_package": "cloud.google.com/go/tpu/apiv1/tpupb;tpupb",
                     "java_multiple_files": true,
                     "java_outer_classname": "CloudTpuProto",
                     "java_package": "com.google.cloud.tpu.v1"
@@ -772,7 +772,7 @@
                 },
                 "v2": {
                   "options": {
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/tpu/v2;tpu",
+                    "go_package": "cloud.google.com/go/tpu/apiv2/tpupb;tpupb",
                     "java_multiple_files": true,
                     "java_outer_classname": "CloudTpuProto",
                     "java_package": "com.google.cloud.tpu.v2"
@@ -1311,6 +1311,10 @@
                         "shieldedInstanceConfig": {
                           "type": "ShieldedInstanceConfig",
                           "id": 45
+                        },
+                        "acceleratorConfig": {
+                          "type": "AcceleratorConfig",
+                          "id": 46
                         }
                       },
                       "nested": {
@@ -1521,6 +1525,11 @@
                         "type": {
                           "type": "string",
                           "id": 2
+                        },
+                        "acceleratorConfigs": {
+                          "rule": "repeated",
+                          "type": "AcceleratorConfig",
+                          "id": 3
                         }
                       }
                     },
@@ -1751,6 +1760,34 @@
                         }
                       }
                     },
+                    "AcceleratorConfig": {
+                      "fields": {
+                        "type": {
+                          "type": "Type",
+                          "id": 1,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED"
+                          }
+                        },
+                        "topology": {
+                          "type": "string",
+                          "id": 2,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED"
+                          }
+                        }
+                      },
+                      "nested": {
+                        "Type": {
+                          "values": {
+                            "TYPE_UNSPECIFIED": 0,
+                            "V2": 2,
+                            "V3": 4,
+                            "V4": 7
+                          }
+                        }
+                      }
+                    },
                     "ShieldedInstanceConfig": {
                       "fields": {
                         "enableSecureBoot": {
@@ -1763,7 +1800,7 @@
                 },
                 "v2alpha1": {
                   "options": {
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/tpu/v2alpha1;tpu",
+                    "go_package": "cloud.google.com/go/tpu/apiv2alpha1/tpupb;tpupb",
                     "java_multiple_files": true,
                     "java_outer_classname": "CloudTpuProto",
                     "java_package": "com.google.cloud.tpu.v2alpha1"
@@ -2417,6 +2454,10 @@
                             "(google.api.field_behavior)": "OUTPUT_ONLY"
                           }
                         },
+                        "acceleratorConfig": {
+                          "type": "AcceleratorConfig",
+                          "id": 44
+                        },
                         "shieldedInstanceConfig": {
                           "type": "ShieldedInstanceConfig",
                           "id": 45
@@ -2971,6 +3012,11 @@
                         "type": {
                           "type": "string",
                           "id": 2
+                        },
+                        "acceleratorConfigs": {
+                          "rule": "repeated",
+                          "type": "AcceleratorConfig",
+                          "id": 3
                         }
                       }
                     },
@@ -3215,6 +3261,34 @@
                           "rule": "repeated",
                           "type": "string",
                           "id": 2
+                        }
+                      }
+                    },
+                    "AcceleratorConfig": {
+                      "fields": {
+                        "type": {
+                          "type": "Type",
+                          "id": 1,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED"
+                          }
+                        },
+                        "topology": {
+                          "type": "string",
+                          "id": 2,
+                          "options": {
+                            "(google.api.field_behavior)": "REQUIRED"
+                          }
+                        }
+                      },
+                      "nested": {
+                        "Type": {
+                          "values": {
+                            "TYPE_UNSPECIFIED": 0,
+                            "V2": 2,
+                            "V3": 4,
+                            "V4": 7
+                          }
                         }
                       }
                     },

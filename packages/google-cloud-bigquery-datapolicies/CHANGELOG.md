@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.1](https://github.com/googleapis/google-cloud-node/compare/bigquery-datapolicies-v0.3.0...bigquery-datapolicies-v0.3.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3986](https://github.com/googleapis/google-cloud-node/issues/3986)) ([20f493c](https://github.com/googleapis/google-cloud-node/commit/20f493c94f7d6626d932b2610e00cbdd5df55f22))
+
+## [0.3.0](https://github.com/googleapis/google-cloud-node/compare/bigquery-datapolicies-v0.2.0...bigquery-datapolicies-v0.3.0) (2023-01-28)
+
+
+### Features
+
+* Added Snooze API support ([#3832](https://github.com/googleapis/google-cloud-node/issues/3832)) ([f715797](https://github.com/googleapis/google-cloud-node/commit/f715797a46cdd2bf4dffc1a82378986941fd6d79))
+
 ## [0.2.0](https://github.com/googleapis/google-cloud-node/compare/bigquery-datapolicies-v0.1.2...bigquery-datapolicies-v0.2.0) (2022-12-16)
 
 

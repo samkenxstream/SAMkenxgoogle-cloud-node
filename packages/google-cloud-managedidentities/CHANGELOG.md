@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.1](https://github.com/googleapis/google-cloud-node/compare/managed-identities-v2.2.0...managed-identities-v2.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3988](https://github.com/googleapis/google-cloud-node/issues/3988)) ([f2134ed](https://github.com/googleapis/google-cloud-node/commit/f2134ed5f166a3bb7dd0bed556700f0b0fd9756a))
+
+## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/managed-identities-v2.1.3...managed-identities-v2.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3853](https://github.com/googleapis/google-cloud-node/issues/3853)) ([cc352db](https://github.com/googleapis/google-cloud-node/commit/cc352db97f3bd8925bf1a7631a0ae64ff976fa4e))
+
 ## [2.1.3](https://github.com/googleapis/nodejs-managed-identities/compare/v2.1.2...v2.1.3) (2022-11-10)
 
 

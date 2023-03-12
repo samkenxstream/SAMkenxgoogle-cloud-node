@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.1](https://github.com/googleapis/google-cloud-node/compare/data-fusion-v2.2.0...data-fusion-v2.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3986](https://github.com/googleapis/google-cloud-node/issues/3986)) ([20f493c](https://github.com/googleapis/google-cloud-node/commit/20f493c94f7d6626d932b2610e00cbdd5df55f22))
+
+## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/data-fusion-v2.1.2...data-fusion-v2.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [2.1.2](https://github.com/googleapis/nodejs-data-fusion/compare/v2.1.1...v2.1.2) (2022-11-10)
 
 

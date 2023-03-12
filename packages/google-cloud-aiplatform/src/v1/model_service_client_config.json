@@ -56,11 +56,19 @@
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },
+        "CopyModel": {
+          "retry_codes_name": "non_idempotent",
+          "retry_params_name": "default"
+        },
         "ImportModelEvaluation": {
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },
         "BatchImportModelEvaluationSlices": {
+          "retry_codes_name": "non_idempotent",
+          "retry_params_name": "default"
+        },
+        "BatchImportEvaluatedAnnotations": {
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },

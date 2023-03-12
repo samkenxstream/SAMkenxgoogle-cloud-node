@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.1](https://github.com/googleapis/google-cloud-node/compare/datastream-v2.2.0...datastream-v2.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/datastream-v2.1.2...datastream-v2.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [2.1.2](https://github.com/googleapis/nodejs-datastream/compare/v2.1.1...v2.1.2) (2022-11-11)
 
 

@@ -42,6 +42,9 @@ import * as gapicConfig from './data_scan_service_client_config.json';
 const version = require('../../../package.json').version;
 
 /**
+ *  DataScanService manages DataScan resources which can be configured to run
+ *  various types of data scanning workload and generate enriched metadata (e.g.
+ *  Data Profile, Data Quality) for the data source.
  * @class
  * @memberof v1
  */
@@ -586,22 +589,21 @@ export class DataScanServiceClient {
   // -- Service calls --
   // -------------------
   /**
-   * Get dataScan resource.
+   * Gets a DataScan resource.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
    *   Required. The resource name of the dataScan:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {google.cloud.dataplex.v1.GetDataScanRequest.DataScanView} [request.view]
-   *   Optional. Used to select the subset of DataScan information to return.
-   *   Defaults to `BASIC`.
+   *   Optional. Select the DataScan view to return. Defaults to `BASIC`.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [DataScan]{@link google.cloud.dataplex.v1.DataScan}.
+   *   The first element of the array is an object representing {@link google.cloud.dataplex.v1.DataScan | DataScan}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -677,20 +679,21 @@ export class DataScanServiceClient {
     return this.innerApiCalls.getDataScan(request, options, callback);
   }
   /**
-   * Run an on demand execution of a DataScan.
+   * Runs an on-demand execution of a DataScan
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
    *   Required. The resource name of the DataScan:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
-   *   Only on-demand DataScans are allowed.
+   *
+   *   Only **OnDemand** data scans are allowed.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [RunDataScanResponse]{@link google.cloud.dataplex.v1.RunDataScanResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.dataplex.v1.RunDataScanResponse | RunDataScanResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -766,22 +769,21 @@ export class DataScanServiceClient {
     return this.innerApiCalls.runDataScan(request, options, callback);
   }
   /**
-   * Get DataScanJob resource.
+   * Gets a DataScanJob resource.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
    *   Required. The resource name of the DataScanJob:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {google.cloud.dataplex.v1.GetDataScanJobRequest.DataScanJobView} [request.view]
-   *   Optional. Used to select the subset of DataScan information to return.
-   *   Defaults to `BASIC`.
+   *   Optional. Select the DataScanJob view to return. Defaults to `BASIC`.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [DataScanJob]{@link google.cloud.dataplex.v1.DataScanJob}.
+   *   The first element of the array is an object representing {@link google.cloud.dataplex.v1.DataScanJob | DataScanJob}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -858,19 +860,20 @@ export class DataScanServiceClient {
   }
 
   /**
-   * Creates a dataScan resource.
+   * Creates a DataScan resource.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
    *   Required. The resource name of the parent location:
-   *   projects/{project}/locations/{location_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {google.cloud.dataplex.v1.DataScan} request.dataScan
    *   Required. DataScan resource.
    * @param {string} request.dataScanId
    *   Required. DataScan identifier.
+   *
    *   * Must contain only lowercase letters, numbers and hyphens.
    *   * Must start with a letter.
    *   * Must end with a number or a letter.
@@ -1008,12 +1011,13 @@ export class DataScanServiceClient {
     >;
   }
   /**
-   * Update the dataScan resource.
+   * Updates a DataScan resource.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {google.cloud.dataplex.v1.DataScan} request.dataScan
-   *   Required. Update description.
+   *   Required. DataScan resource to be updated.
+   *
    *   Only fields specified in `update_mask` are updated.
    * @param {google.protobuf.FieldMask} request.updateMask
    *   Required. Mask of fields to update.
@@ -1149,14 +1153,14 @@ export class DataScanServiceClient {
     >;
   }
   /**
-   * Delete the dataScan resource.
+   * Deletes a DataScan resource.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.name
    *   Required. The resource name of the dataScan:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
@@ -1290,13 +1294,14 @@ export class DataScanServiceClient {
     >;
   }
   /**
-   * Lists dataScans.
+   * Lists DataScans.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. projects/{project}/locations/{location_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   Required. The resource name of the parent location:
+   *   `projects/{project}/locations/{location_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {number} [request.pageSize]
    *   Optional. Maximum number of dataScans to return. The service may return
@@ -1310,12 +1315,12 @@ export class DataScanServiceClient {
    * @param {string} [request.filter]
    *   Optional. Filter request.
    * @param {string} [request.orderBy]
-   *   Optional. Order by fields (name or create_time) for the result.
+   *   Optional. Order by fields (`name` or `create_time`) for the result.
    *   If not specified, the ordering is undefined.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [DataScan]{@link google.cloud.dataplex.v1.DataScan}.
+   *   The first element of the array is Array of {@link google.cloud.dataplex.v1.DataScan | DataScan}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1399,8 +1404,9 @@ export class DataScanServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. projects/{project}/locations/{location_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   Required. The resource name of the parent location:
+   *   `projects/{project}/locations/{location_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {number} [request.pageSize]
    *   Optional. Maximum number of dataScans to return. The service may return
@@ -1414,12 +1420,12 @@ export class DataScanServiceClient {
    * @param {string} [request.filter]
    *   Optional. Filter request.
    * @param {string} [request.orderBy]
-   *   Optional. Order by fields (name or create_time) for the result.
+   *   Optional. Order by fields (`name` or `create_time`) for the result.
    *   If not specified, the ordering is undefined.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [DataScan]{@link google.cloud.dataplex.v1.DataScan} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.dataplex.v1.DataScan | DataScan} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listDataScansAsync()`
@@ -1457,8 +1463,9 @@ export class DataScanServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. projects/{project}/locations/{location_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   Required. The resource name of the parent location:
+   *   `projects/{project}/locations/{location_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {number} [request.pageSize]
    *   Optional. Maximum number of dataScans to return. The service may return
@@ -1472,14 +1479,14 @@ export class DataScanServiceClient {
    * @param {string} [request.filter]
    *   Optional. Filter request.
    * @param {string} [request.orderBy]
-   *   Optional. Order by fields (name or create_time) for the result.
+   *   Optional. Order by fields (`name` or `create_time`) for the result.
    *   If not specified, the ordering is undefined.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [DataScan]{@link google.cloud.dataplex.v1.DataScan}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.dataplex.v1.DataScan | DataScan}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1509,14 +1516,14 @@ export class DataScanServiceClient {
     ) as AsyncIterable<protos.google.cloud.dataplex.v1.IDataScan>;
   }
   /**
-   * Lists DataScanJobs under the given dataScan.
+   * Lists DataScanJobs under the given DataScan.
    *
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
    *   Required. The resource name of the parent environment:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {number} [request.pageSize]
    *   Optional. Maximum number of DataScanJobs to return. The service may return
@@ -1531,7 +1538,7 @@ export class DataScanServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [DataScanJob]{@link google.cloud.dataplex.v1.DataScanJob}.
+   *   The first element of the array is Array of {@link google.cloud.dataplex.v1.DataScanJob | DataScanJob}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1622,8 +1629,8 @@ export class DataScanServiceClient {
    *   The request object that will be sent.
    * @param {string} request.parent
    *   Required. The resource name of the parent environment:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {number} [request.pageSize]
    *   Optional. Maximum number of DataScanJobs to return. The service may return
@@ -1638,7 +1645,7 @@ export class DataScanServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [DataScanJob]{@link google.cloud.dataplex.v1.DataScanJob} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.dataplex.v1.DataScanJob | DataScanJob} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listDataScanJobsAsync()`
@@ -1677,8 +1684,8 @@ export class DataScanServiceClient {
    *   The request object that will be sent.
    * @param {string} request.parent
    *   Required. The resource name of the parent environment:
-   *   projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-   *   where `{project}` refers to a project_id or project_number and
+   *   `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+   *   where `project` refers to a *project_id* or *project_number* and
    *   `location_id` refers to a GCP region.
    * @param {number} [request.pageSize]
    *   Optional. Maximum number of DataScanJobs to return. The service may return
@@ -1695,7 +1702,7 @@ export class DataScanServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [DataScanJob]{@link google.cloud.dataplex.v1.DataScanJob}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.dataplex.v1.DataScanJob | DataScanJob}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1732,9 +1739,9 @@ export class DataScanServiceClient {
    * @param {string} request.name
    *   Resource name for the location.
    * @param {object} [options]
-   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html | CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Location]{@link google.cloud.location.Location}.
+   *   The first element of the array is an object representing {@link google.cloud.location.Location | Location}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1784,7 +1791,7 @@ export class DataScanServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Location]{@link google.cloud.location.Location}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.location.Location | Location}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1813,20 +1820,18 @@ export class DataScanServiceClient {
    * @param {string} request.name - The name of the operation resource.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   *   details.
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   *   for the details.
    * @param {function(?Error, ?Object)=} callback
    *   The function which will be called with the result of the API call.
    *
    *   The second parameter to the callback is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}.
+   *   {@link google.longrunning.Operation | google.longrunning.Operation}.
    * @return {Promise} - The promise which resolves to an array.
    *   The first element of the array is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}. The promise has a method named
-   * "cancel" which cancels the ongoing API call.
+   * {@link google.longrunning.Operation | google.longrunning.Operation}.
+   * The promise has a method named "cancel" which cancels the ongoing API call.
    *
    * @example
    * ```
@@ -1870,11 +1875,11 @@ export class DataScanServiceClient {
    *   resources in a page.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    *   details.
    * @returns {Object}
-   *   An iterable Object that conforms to @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols.
+   *   An iterable Object that conforms to {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols | iteration protocols}.
    *
    * @example
    * ```
@@ -1905,8 +1910,8 @@ export class DataScanServiceClient {
    * @param {string} request.name - The name of the operation resource to be cancelled.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    * details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
@@ -1948,9 +1953,9 @@ export class DataScanServiceClient {
    * @param {string} request.name - The name of the operation resource to be deleted.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   * details.
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   * for the details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
    * @return {Promise} - The promise which resolves when API call finishes.

@@ -834,6 +834,26 @@
                 "cancelHyperparameterTuningJob"
               ]
             },
+            "CreateNasJob": {
+              "methods": [
+                "createNasJob"
+              ]
+            },
+            "GetNasJob": {
+              "methods": [
+                "getNasJob"
+              ]
+            },
+            "CancelNasJob": {
+              "methods": [
+                "cancelNasJob"
+              ]
+            },
+            "GetNasTrialDetail": {
+              "methods": [
+                "getNasTrialDetail"
+              ]
+            },
             "CreateBatchPredictionJob": {
               "methods": [
                 "createBatchPredictionJob"
@@ -884,6 +904,11 @@
                 "deleteHyperparameterTuningJob"
               ]
             },
+            "DeleteNasJob": {
+              "methods": [
+                "deleteNasJob"
+              ]
+            },
             "DeleteBatchPredictionJob": {
               "methods": [
                 "deleteBatchPredictionJob"
@@ -918,6 +943,20 @@
                 "listHyperparameterTuningJobs",
                 "listHyperparameterTuningJobsStream",
                 "listHyperparameterTuningJobsAsync"
+              ]
+            },
+            "ListNasJobs": {
+              "methods": [
+                "listNasJobs",
+                "listNasJobsStream",
+                "listNasJobsAsync"
+              ]
+            },
+            "ListNasTrialDetails": {
+              "methods": [
+                "listNasTrialDetails",
+                "listNasTrialDetailsStream",
+                "listNasTrialDetailsAsync"
               ]
             },
             "ListBatchPredictionJobs": {
@@ -991,6 +1030,26 @@
                 "cancelHyperparameterTuningJob"
               ]
             },
+            "CreateNasJob": {
+              "methods": [
+                "createNasJob"
+              ]
+            },
+            "GetNasJob": {
+              "methods": [
+                "getNasJob"
+              ]
+            },
+            "CancelNasJob": {
+              "methods": [
+                "cancelNasJob"
+              ]
+            },
+            "GetNasTrialDetail": {
+              "methods": [
+                "getNasTrialDetail"
+              ]
+            },
             "CreateBatchPredictionJob": {
               "methods": [
                 "createBatchPredictionJob"
@@ -1041,6 +1100,11 @@
                 "deleteHyperparameterTuningJob"
               ]
             },
+            "DeleteNasJob": {
+              "methods": [
+                "deleteNasJob"
+              ]
+            },
             "DeleteBatchPredictionJob": {
               "methods": [
                 "deleteBatchPredictionJob"
@@ -1077,6 +1141,20 @@
                 "listHyperparameterTuningJobsAsync"
               ]
             },
+            "ListNasJobs": {
+              "methods": [
+                "listNasJobs",
+                "listNasJobsStream",
+                "listNasJobsAsync"
+              ]
+            },
+            "ListNasTrialDetails": {
+              "methods": [
+                "listNasTrialDetails",
+                "listNasTrialDetailsStream",
+                "listNasTrialDetailsAsync"
+              ]
+            },
             "ListBatchPredictionJobs": {
               "methods": [
                 "listBatchPredictionJobs",
@@ -1096,6 +1174,40 @@
                 "listModelDeploymentMonitoringJobs",
                 "listModelDeploymentMonitoringJobsStream",
                 "listModelDeploymentMonitoringJobsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MatchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MatchServiceClient",
+          "rpcs": {
+            "FindNeighbors": {
+              "methods": [
+                "findNeighbors"
+              ]
+            },
+            "ReadIndexDatapoints": {
+              "methods": [
+                "readIndexDatapoints"
+              ]
+            }
+          }
+        },
+        "grpc-fallback": {
+          "libraryClient": "MatchServiceClient",
+          "rpcs": {
+            "FindNeighbors": {
+              "methods": [
+                "findNeighbors"
+              ]
+            },
+            "ReadIndexDatapoints": {
+              "methods": [
+                "readIndexDatapoints"
               ]
             }
           }
@@ -1524,6 +1636,11 @@
                 "batchImportModelEvaluationSlices"
               ]
             },
+            "BatchImportEvaluatedAnnotations": {
+              "methods": [
+                "batchImportEvaluatedAnnotations"
+              ]
+            },
             "GetModelEvaluation": {
               "methods": [
                 "getModelEvaluation"
@@ -1557,6 +1674,11 @@
             "ExportModel": {
               "methods": [
                 "exportModel"
+              ]
+            },
+            "CopyModel": {
+              "methods": [
+                "copyModel"
               ]
             },
             "ListModels": {
@@ -1617,6 +1739,11 @@
                 "batchImportModelEvaluationSlices"
               ]
             },
+            "BatchImportEvaluatedAnnotations": {
+              "methods": [
+                "batchImportEvaluatedAnnotations"
+              ]
+            },
             "GetModelEvaluation": {
               "methods": [
                 "getModelEvaluation"
@@ -1650,6 +1777,11 @@
             "ExportModel": {
               "methods": [
                 "exportModel"
+              ]
+            },
+            "CopyModel": {
+              "methods": [
+                "copyModel"
               ]
             },
             "ListModels": {

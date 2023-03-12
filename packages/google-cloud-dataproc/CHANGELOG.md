@@ -4,6 +4,28 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/dataproc?activeTab=versions
 
+## [4.4.0](https://github.com/googleapis/google-cloud-node/compare/dataproc-v4.3.1...dataproc-v4.4.0) (2023-02-23)
+
+
+### Features
+
+* [dataproc] add support for new Dataproc features ([#4000](https://github.com/googleapis/google-cloud-node/issues/4000)) ([c530beb](https://github.com/googleapis/google-cloud-node/commit/c530beb09626986e4eaaec3066cb6b627dce6070))
+
+## [4.3.1](https://github.com/googleapis/google-cloud-node/compare/dataproc-v4.3.0...dataproc-v4.3.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [4.3.0](https://github.com/googleapis/google-cloud-node/compare/dataproc-v4.2.0...dataproc-v4.3.0) (2023-01-28)
+
+
+### Features
+
+* Add SPOT to Preemptibility enum ([#3867](https://github.com/googleapis/google-cloud-node/issues/3867)) ([9ef74ad](https://github.com/googleapis/google-cloud-node/commit/9ef74ada3aea637aacc7554218c4e5be416264b1))
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [4.2.0](https://github.com/googleapis/google-cloud-node/compare/dataproc-v4.1.1...dataproc-v4.2.0) (2022-12-16)
 
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.1](https://github.com/googleapis/google-cloud-node/compare/gke-backup-v0.3.0...gke-backup-v0.3.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [0.3.0](https://github.com/googleapis/google-cloud-node/compare/gke-backup-v0.2.2...gke-backup-v0.3.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [0.2.2](https://github.com/googleapis/nodejs-gke-backup/compare/v0.2.1...v0.2.2) (2022-11-11)
 
 

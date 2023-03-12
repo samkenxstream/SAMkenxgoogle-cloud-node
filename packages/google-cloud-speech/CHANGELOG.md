@@ -4,6 +4,27 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/speech?activeTab=versions
 
+## [5.4.0](https://github.com/googleapis/google-cloud-node/compare/speech-v5.3.1...speech-v5.4.0) (2023-02-28)
+
+
+### Features
+
+* Voice Activity Detection: adding speech event time and speech event type ([#4020](https://github.com/googleapis/google-cloud-node/issues/4020)) ([c66276d](https://github.com/googleapis/google-cloud-node/commit/c66276de5e7a2343913941abe373a339c84123bb))
+
+## [5.3.1](https://github.com/googleapis/google-cloud-node/compare/speech-v5.3.0...speech-v5.3.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3989](https://github.com/googleapis/google-cloud-node/issues/3989)) ([95399f7](https://github.com/googleapis/google-cloud-node/commit/95399f731547b06cde5ed0914d89c59fdc9fd968))
+
+## [5.3.0](https://github.com/googleapis/google-cloud-node/compare/speech-v5.2.0...speech-v5.3.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#978](https://github.com/googleapis/google-cloud-node/issues/978)) ([a4a17b4](https://github.com/googleapis/google-cloud-node/commit/a4a17b41cce76a9a923b90d27c38f1b6bd712b97))
+
 ## [5.2.0](https://github.com/googleapis/nodejs-speech/compare/v5.1.1...v5.2.0) (2023-01-20)
 
 

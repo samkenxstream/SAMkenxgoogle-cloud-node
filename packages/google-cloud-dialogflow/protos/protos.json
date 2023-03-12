@@ -5758,6 +5758,10 @@
                         "contextSize": {
                           "type": "int32",
                           "id": 4
+                        },
+                        "assistQueryParams": {
+                          "type": "AssistQueryParameters",
+                          "id": 5
                         }
                       }
                     },
@@ -7139,7 +7143,7 @@
                             "(google.api.http).body": "*",
                             "(google.api.http).additional_bindings.post": "/v2/{conversation_profile=projects/*/locations/*/conversationProfiles/*}:setSuggestionFeatureConfig",
                             "(google.api.http).additional_bindings.body": "*",
-                            "(google.api.method_signature)": "conversation_profile",
+                            "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_config",
                             "(google.longrunning.operation_info).response_type": "ConversationProfile",
                             "(google.longrunning.operation_info).metadata_type": "SetSuggestionFeatureConfigOperationMetadata"
                           },
@@ -7158,6 +7162,9 @@
                               "(google.api.method_signature)": "conversation_profile"
                             },
                             {
+                              "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_config"
+                            },
+                            {
                               "(google.longrunning.operation_info)": {
                                 "response_type": "ConversationProfile",
                                 "metadata_type": "SetSuggestionFeatureConfigOperationMetadata"
@@ -7173,7 +7180,7 @@
                             "(google.api.http).body": "*",
                             "(google.api.http).additional_bindings.post": "/v2/{conversation_profile=projects/*/locations/*/conversationProfiles/*}:clearSuggestionFeatureConfig",
                             "(google.api.http).additional_bindings.body": "*",
-                            "(google.api.method_signature)": "conversation_profile",
+                            "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_type",
                             "(google.longrunning.operation_info).response_type": "ConversationProfile",
                             "(google.longrunning.operation_info).metadata_type": "ClearSuggestionFeatureConfigOperationMetadata"
                           },
@@ -7190,6 +7197,9 @@
                             },
                             {
                               "(google.api.method_signature)": "conversation_profile"
+                            },
+                            {
+                              "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_type"
                             },
                             {
                               "(google.longrunning.operation_info)": {
@@ -7274,6 +7284,10 @@
                           "options": {
                             "(google.api.resource_reference).type": "dialogflow.googleapis.com/CXSecuritySettings"
                           }
+                        },
+                        "ttsConfig": {
+                          "type": "SynthesizeSpeechConfig",
+                          "id": 18
                         }
                       }
                     },
@@ -9727,8 +9741,8 @@
                 "v2beta1": {
                   "options": {
                     "cc_enable_arenas": true,
-                    "csharp_namespace": "Google.Cloud.Dialogflow.V2beta1",
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/dialogflow/v2beta1;dialogflow",
+                    "csharp_namespace": "Google.Cloud.Dialogflow.V2Beta1",
+                    "go_package": "cloud.google.com/go/dialogflow/apiv2beta1/dialogflowpb;dialogflowpb",
                     "java_multiple_files": true,
                     "java_outer_classname": "WebhookProto",
                     "java_package": "com.google.cloud.dialogflow.v2beta1",
@@ -12043,6 +12057,18 @@
                         }
                       }
                     },
+                    "BargeInConfig": {
+                      "fields": {
+                        "noBargeInDuration": {
+                          "type": "google.protobuf.Duration",
+                          "id": 1
+                        },
+                        "totalDuration": {
+                          "type": "google.protobuf.Duration",
+                          "id": 2
+                        }
+                      }
+                    },
                     "InputAudioConfig": {
                       "fields": {
                         "audioEncoding": {
@@ -12089,6 +12115,10 @@
                         "disableNoSpeechRecognizedEvent": {
                           "type": "bool",
                           "id": 14
+                        },
+                        "bargeInConfig": {
+                          "type": "BargeInConfig",
+                          "id": 15
                         }
                       }
                     },
@@ -16026,6 +16056,10 @@
                         "contextSize": {
                           "type": "int32",
                           "id": 4
+                        },
+                        "assistQueryParams": {
+                          "type": "AssistQueryParameters",
+                          "id": 5
                         }
                       }
                     },
@@ -16241,7 +16275,7 @@
                             "(google.api.http).body": "*",
                             "(google.api.http).additional_bindings.post": "/v2beta1/{conversation_profile=projects/*/locations/*/conversationProfiles/*}:setSuggestionFeatureConfig",
                             "(google.api.http).additional_bindings.body": "*",
-                            "(google.api.method_signature)": "conversation_profile",
+                            "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_config",
                             "(google.longrunning.operation_info).response_type": "ConversationProfile",
                             "(google.longrunning.operation_info).metadata_type": "SetSuggestionFeatureConfigOperationMetadata"
                           },
@@ -16260,6 +16294,9 @@
                               "(google.api.method_signature)": "conversation_profile"
                             },
                             {
+                              "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_config"
+                            },
+                            {
                               "(google.longrunning.operation_info)": {
                                 "response_type": "ConversationProfile",
                                 "metadata_type": "SetSuggestionFeatureConfigOperationMetadata"
@@ -16275,7 +16312,7 @@
                             "(google.api.http).body": "*",
                             "(google.api.http).additional_bindings.post": "/v2beta1/{conversation_profile=projects/*/locations/*/conversationProfiles/*}:clearSuggestionFeatureConfig",
                             "(google.api.http).additional_bindings.body": "*",
-                            "(google.api.method_signature)": "conversation_profile",
+                            "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_type",
                             "(google.longrunning.operation_info).response_type": "ConversationProfile",
                             "(google.longrunning.operation_info).metadata_type": "ClearSuggestionFeatureConfigOperationMetadata"
                           },
@@ -16292,6 +16329,9 @@
                             },
                             {
                               "(google.api.method_signature)": "conversation_profile"
+                            },
+                            {
+                              "(google.api.method_signature)": "conversation_profile,participant_role,suggestion_feature_type"
                             },
                             {
                               "(google.longrunning.operation_info)": {
@@ -16376,6 +16416,10 @@
                           "options": {
                             "(google.api.resource_reference).type": "dialogflow.googleapis.com/CXSecuritySettings"
                           }
+                        },
+                        "ttsConfig": {
+                          "type": "SynthesizeSpeechConfig",
+                          "id": 18
                         }
                       }
                     },

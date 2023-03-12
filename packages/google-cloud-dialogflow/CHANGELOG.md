@@ -4,6 +4,34 @@
 
 [1]: https://www.npmjs.com/package/dialogflow?activeTab=versions
 
+## [5.7.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-v5.6.0...dialogflow-v5.7.0) (2023-03-06)
+
+
+### Features
+
+* [dialogflow] added support for custom content types ([#4053](https://github.com/googleapis/google-cloud-node/issues/4053)) ([e7a67d3](https://github.com/googleapis/google-cloud-node/commit/e7a67d3e424c19bc576f821d65895e9598307eb8))
+
+## [5.6.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-v5.5.1...dialogflow-v5.6.0) (2023-02-22)
+
+
+### Features
+
+* [dialogflow] added support for AssistQueryParameters and SynthesizeSpeechConfig ([#3995](https://github.com/googleapis/google-cloud-node/issues/3995)) ([57c0441](https://github.com/googleapis/google-cloud-node/commit/57c0441e11fe7c7f2b185bb8061c8be1a036be11))
+
+## [5.5.1](https://github.com/googleapis/google-cloud-node/compare/dialogflow-v5.5.0...dialogflow-v5.5.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [5.5.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-v5.4.0...dialogflow-v5.5.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [5.4.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-v5.3.0...dialogflow-v5.4.0) (2022-12-16)
 
 

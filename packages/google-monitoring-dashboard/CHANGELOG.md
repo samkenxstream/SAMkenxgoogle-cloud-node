@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.9.1](https://github.com/googleapis/google-cloud-node/compare/monitoring-dashboards-v2.9.0...monitoring-dashboards-v2.9.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3991](https://github.com/googleapis/google-cloud-node/issues/3991)) ([c6326d9](https://github.com/googleapis/google-cloud-node/commit/c6326d90abb9b649b25052e4afe7b3eb0f65bcb4))
+
+## [2.9.0](https://github.com/googleapis/google-cloud-node/compare/monitoring-dashboards-v2.8.0...monitoring-dashboards-v2.9.0) (2023-01-28)
+
+
+### Features
+
+* Added support for horizontal bar rendering and column settings on time series tables ([#3842](https://github.com/googleapis/google-cloud-node/issues/3842)) ([7ac180a](https://github.com/googleapis/google-cloud-node/commit/7ac180aab738144ffe7479a7575b5e3937985ce4))
+
 ## [2.8.0](https://github.com/googleapis/google-cloud-node/compare/monitoring-dashboards-v2.7.2...monitoring-dashboards-v2.8.0) (2022-11-10)
 
 

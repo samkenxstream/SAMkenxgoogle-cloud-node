@@ -25,7 +25,6 @@ import type {
   ClientOptions,
 } from 'google-gax';
 import {PassThrough} from 'stream';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as protos from '../../protos/protos';
 import jsonProtos = require('../../protos/protos.json');
 /**
@@ -339,8 +338,8 @@ export class StreamingVideoIntelligenceServiceClient {
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
    *   An object stream which is both readable and writable. It accepts objects
-   *   representing [StreamingAnnotateVideoRequest]{@link google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest} for write() method, and
-   *   will emit objects representing [StreamingAnnotateVideoResponse]{@link google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoResponse} on 'data' event asynchronously.
+   *   representing {@link google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest | StreamingAnnotateVideoRequest} for write() method, and
+   *   will emit objects representing {@link google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoResponse | StreamingAnnotateVideoResponse} on 'data' event asynchronously.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#bi-directional-streaming)
    *   for more details and examples.

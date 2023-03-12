@@ -474,11 +474,11 @@ export class AttachedClustersClient {
    *   `projects/<project-id>/locations/<region>/attachedClusters/<cluster-id>`.
    *
    *   See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-   *   for more details on GCP resource names.
+   *   for more details on Google Cloud Platform resource names.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [AttachedCluster]{@link google.cloud.gkemulticloud.v1.AttachedCluster}.
+   *   The first element of the array is an object representing {@link google.cloud.gkemulticloud.v1.AttachedCluster | AttachedCluster}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -584,7 +584,7 @@ export class AttachedClustersClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [AttachedServerConfig]{@link google.cloud.gkemulticloud.v1.AttachedServerConfig}.
+   *   The first element of the array is an object representing {@link google.cloud.gkemulticloud.v1.AttachedServerConfig | AttachedServerConfig}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -690,7 +690,7 @@ export class AttachedClustersClient {
    *   See [Resource Names](https://cloud.google.com/apis/design/resource_names)
    *   for more details on Google Cloud resource names.
    * @param {string} request.attachedClusterId
-   *   Required. A client provided ID the resource. Must be unique within the
+   *   Required. A client provided ID of the resource. Must be unique within the
    *   parent resource.
    *
    *   The provided ID will be part of the
@@ -703,7 +703,7 @@ export class AttachedClustersClient {
    *   When generating an install manifest for importing an existing Membership
    *   resource, the attached_cluster_id field must be the Membership id.
    *
-   *   Membership names are formatted as `resource name formatted as
+   *   Membership names are formatted as
    *   `projects/<project-id>/locations/<region>/memberships/<membership-id>`.
    * @param {string} request.platformVersion
    *   Required. The platform version for the cluster (e.g. `1.19.0-gke.1000`).
@@ -714,7 +714,7 @@ export class AttachedClustersClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [GenerateAttachedClusterInstallManifestResponse]{@link google.cloud.gkemulticloud.v1.GenerateAttachedClusterInstallManifestResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.gkemulticloud.v1.GenerateAttachedClusterInstallManifestResponse | GenerateAttachedClusterInstallManifestResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -809,7 +809,7 @@ export class AttachedClustersClient {
   /**
    * Creates a new
    * {@link google.cloud.gkemulticloud.v1.AttachedCluster|AttachedCluster} resource
-   * on a given GCP project and region.
+   * on a given Google Cloud Platform project and region.
    *
    * If successful, the response contains a newly created
    * {@link google.longrunning.Operation|Operation} resource that can be
@@ -1313,7 +1313,7 @@ export class AttachedClustersClient {
    *   `projects/<project-id>/locations/<region>/attachedClusters/<cluster-id>`.
    *
    *   See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-   *   for more details on GCP resource names.
+   *   for more details on Google Cloud Platform resource names.
    * @param {boolean} request.validateOnly
    *   If set, only validate the request, but do not actually delete the resource.
    * @param {boolean} request.allowMissing
@@ -1481,7 +1481,7 @@ export class AttachedClustersClient {
    *   Location names are formatted as `projects/<project-id>/locations/<region>`.
    *
    *   See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-   *   for more details on GCP resource names.
+   *   for more details on Google Cloud Platform resource names.
    * @param {number} request.pageSize
    *   The maximum number of items to return.
    *
@@ -1497,7 +1497,7 @@ export class AttachedClustersClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [AttachedCluster]{@link google.cloud.gkemulticloud.v1.AttachedCluster}.
+   *   The first element of the array is Array of {@link google.cloud.gkemulticloud.v1.AttachedCluster | AttachedCluster}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1593,7 +1593,7 @@ export class AttachedClustersClient {
    *   Location names are formatted as `projects/<project-id>/locations/<region>`.
    *
    *   See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-   *   for more details on GCP resource names.
+   *   for more details on Google Cloud Platform resource names.
    * @param {number} request.pageSize
    *   The maximum number of items to return.
    *
@@ -1609,7 +1609,7 @@ export class AttachedClustersClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [AttachedCluster]{@link google.cloud.gkemulticloud.v1.AttachedCluster} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.gkemulticloud.v1.AttachedCluster | AttachedCluster} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listAttachedClustersAsync()`
@@ -1653,7 +1653,7 @@ export class AttachedClustersClient {
    *   Location names are formatted as `projects/<project-id>/locations/<region>`.
    *
    *   See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-   *   for more details on GCP resource names.
+   *   for more details on Google Cloud Platform resource names.
    * @param {number} request.pageSize
    *   The maximum number of items to return.
    *
@@ -1671,7 +1671,7 @@ export class AttachedClustersClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [AttachedCluster]{@link google.cloud.gkemulticloud.v1.AttachedCluster}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.gkemulticloud.v1.AttachedCluster | AttachedCluster}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1709,20 +1709,18 @@ export class AttachedClustersClient {
    * @param {string} request.name - The name of the operation resource.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   *   details.
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   *   for the details.
    * @param {function(?Error, ?Object)=} callback
    *   The function which will be called with the result of the API call.
    *
    *   The second parameter to the callback is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}.
+   *   {@link google.longrunning.Operation | google.longrunning.Operation}.
    * @return {Promise} - The promise which resolves to an array.
    *   The first element of the array is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}. The promise has a method named
-   * "cancel" which cancels the ongoing API call.
+   * {@link google.longrunning.Operation | google.longrunning.Operation}.
+   * The promise has a method named "cancel" which cancels the ongoing API call.
    *
    * @example
    * ```
@@ -1766,11 +1764,11 @@ export class AttachedClustersClient {
    *   resources in a page.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    *   details.
    * @returns {Object}
-   *   An iterable Object that conforms to @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols.
+   *   An iterable Object that conforms to {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols | iteration protocols}.
    *
    * @example
    * ```
@@ -1801,8 +1799,8 @@ export class AttachedClustersClient {
    * @param {string} request.name - The name of the operation resource to be cancelled.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    * details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
@@ -1844,9 +1842,9 @@ export class AttachedClustersClient {
    * @param {string} request.name - The name of the operation resource to be deleted.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   * details.
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   * for the details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
    * @return {Promise} - The promise which resolves when API call finishes.

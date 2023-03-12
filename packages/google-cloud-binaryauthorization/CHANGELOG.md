@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.3.0](https://github.com/googleapis/google-cloud-node/compare/binary-authorization-v2.2.1...binary-authorization-v2.3.0) (2023-03-06)
+
+
+### Features
+
+* [binaryauthorization] Import of Grafeas from Github ([#4051](https://github.com/googleapis/google-cloud-node/issues/4051)) ([443abe3](https://github.com/googleapis/google-cloud-node/commit/443abe3310b5063df855c3ab0d5fc8d338570cdf))
+
+## [2.2.1](https://github.com/googleapis/google-cloud-node/compare/binary-authorization-v2.2.0...binary-authorization-v2.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3986](https://github.com/googleapis/google-cloud-node/issues/3986)) ([20f493c](https://github.com/googleapis/google-cloud-node/commit/20f493c94f7d6626d932b2610e00cbdd5df55f22))
+
+## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/binary-authorization-v2.1.1...binary-authorization-v2.2.0) (2023-01-28)
+
+
+### Features
+
+* Added Snooze API support ([#3832](https://github.com/googleapis/google-cloud-node/issues/3832)) ([f715797](https://github.com/googleapis/google-cloud-node/commit/f715797a46cdd2bf4dffc1a82378986941fd6d79))
+* Added SuggestConversationSummary RPC ([#3851](https://github.com/googleapis/google-cloud-node/issues/3851)) ([79fbaa8](https://github.com/googleapis/google-cloud-node/commit/79fbaa833d08738fa37aa37158ddb5b1c91710e1))
+
 ## [2.1.1](https://github.com/googleapis/nodejs-binary-authorization/compare/v2.1.0...v2.1.1) (2022-11-10)
 
 

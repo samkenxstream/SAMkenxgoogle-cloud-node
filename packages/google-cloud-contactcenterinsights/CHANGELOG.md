@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.5.0](https://github.com/googleapis/google-cloud-node/compare/contact-center-insights-v2.4.1...contact-center-insights-v2.5.0) (2023-03-06)
+
+
+### Features
+
+* [contactcenterinsights] add a way to specify the conversation automatic analysis percentage for the UploadConversation API when creating Analyses in Insights ([#4041](https://github.com/googleapis/google-cloud-node/issues/4041)) ([117ae72](https://github.com/googleapis/google-cloud-node/commit/117ae7293c8cf472e900d56c90225c49d6ca2dbc))
+
+## [2.4.1](https://github.com/googleapis/google-cloud-node/compare/contact-center-insights-v2.4.0...contact-center-insights-v2.4.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3986](https://github.com/googleapis/google-cloud-node/issues/3986)) ([20f493c](https://github.com/googleapis/google-cloud-node/commit/20f493c94f7d6626d932b2610e00cbdd5df55f22))
+
+## [2.4.0](https://github.com/googleapis/google-cloud-node/compare/contact-center-insights-v2.3.0...contact-center-insights-v2.4.0) (2023-02-09)
+
+
+### Features
+
+* Add IngestConversationsStats ([#3941](https://github.com/googleapis/google-cloud-node/issues/3941)) ([7d98066](https://github.com/googleapis/google-cloud-node/commit/7d98066e5335f8e089a9f193a2ec907b99b3e042))
+
+## [2.3.0](https://github.com/googleapis/google-cloud-node/compare/contact-center-insights-v2.2.0...contact-center-insights-v2.3.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/contact-center-insights-v2.1.2...contact-center-insights-v2.2.0) (2022-12-16)
 
 

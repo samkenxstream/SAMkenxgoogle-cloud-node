@@ -150,6 +150,8 @@ service ConversationProfiles {
       }
     };
     option (google.api.method_signature) = "conversation_profile";
+    option (google.api.method_signature) =
+        "conversation_profile,participant_role,suggestion_feature_config";
     option (google.longrunning.operation_info) = {
       response_type: "ConversationProfile"
       metadata_type: "SetSuggestionFeatureConfigOperationMetadata"
@@ -178,6 +180,8 @@ service ConversationProfiles {
       }
     };
     option (google.api.method_signature) = "conversation_profile";
+    option (google.api.method_signature) =
+        "conversation_profile,participant_role,suggestion_feature_type";
     option (google.longrunning.operation_info) = {
       response_type: "ConversationProfile"
       metadata_type: "ClearSuggestionFeatureConfigOperationMetadata"
@@ -252,6 +256,12 @@ message ConversationProfile {
   string security_settings = 13 [(google.api.resource_reference) = {
     type: "dialogflow.googleapis.com/CXSecuritySettings"
   }];
+
+  // Configuration for Text-to-Speech synthesization.
+  //
+  // Used by Phone Gateway to specify synthesization options. If agent defines
+  // synthesization options as well, agent settings overrides the option here.
+  SynthesizeSpeechConfig tts_config = 18;
 }
 
 // The request message for

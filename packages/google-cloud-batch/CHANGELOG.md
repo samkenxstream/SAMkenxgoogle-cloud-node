@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.7.0](https://github.com/googleapis/google-cloud-node/compare/batch-v0.6.1...batch-v0.7.0) (2023-03-06)
+
+
+### Features
+
+* [batch] added StatusEvent.task_state ([#4042](https://github.com/googleapis/google-cloud-node/issues/4042)) ([a4c2343](https://github.com/googleapis/google-cloud-node/commit/a4c234315a2337c07f2556a6125f22bf7ddada2f))
+
+## [0.6.1](https://github.com/googleapis/google-cloud-node/compare/batch-v0.6.0...batch-v0.6.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3985](https://github.com/googleapis/google-cloud-node/issues/3985)) ([fb2a6fd](https://github.com/googleapis/google-cloud-node/commit/fb2a6fdbd9dcf2ae91b3767629d71f0970d0712c))
+
+## [0.6.0](https://github.com/googleapis/google-cloud-node/compare/batch-v0.5.0...batch-v0.6.0) (2023-02-09)
+
+
+### Features
+
+* [batch] support custom scopes for service account in v1  ([#3950](https://github.com/googleapis/google-cloud-node/issues/3950)) ([f72de27](https://github.com/googleapis/google-cloud-node/commit/f72de2714e5bb69ecd792397dac6d2acc66277e8))
+
+## [0.5.0](https://github.com/googleapis/google-cloud-node/compare/batch-v0.4.0...batch-v0.5.0) (2023-01-28)
+
+
+### Features
+
+* Support secret and encrypted environment variables in v1 ([#3828](https://github.com/googleapis/google-cloud-node/issues/3828)) ([b233565](https://github.com/googleapis/google-cloud-node/commit/b2335658eb4a0c6ef3d771004fde73c53c7f2673))
+
 ## [0.4.0](https://github.com/googleapis/google-cloud-node/compare/batch-v0.3.2...batch-v0.4.0) (2022-12-16)
 
 

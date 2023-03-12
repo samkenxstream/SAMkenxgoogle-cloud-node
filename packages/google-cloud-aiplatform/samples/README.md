@@ -41,6 +41,7 @@
   * [Featurestore_service.create_featurestore](#featurestore_service.create_featurestore)
   * [Featurestore_service.delete_entity_type](#featurestore_service.delete_entity_type)
   * [Featurestore_service.delete_feature](#featurestore_service.delete_feature)
+  * [Featurestore_service.delete_feature_values](#featurestore_service.delete_feature_values)
   * [Featurestore_service.delete_featurestore](#featurestore_service.delete_featurestore)
   * [Featurestore_service.export_feature_values](#featurestore_service.export_feature_values)
   * [Featurestore_service.get_entity_type](#featurestore_service.get_entity_type)
@@ -73,26 +74,33 @@
   * [Job_service.cancel_custom_job](#job_service.cancel_custom_job)
   * [Job_service.cancel_data_labeling_job](#job_service.cancel_data_labeling_job)
   * [Job_service.cancel_hyperparameter_tuning_job](#job_service.cancel_hyperparameter_tuning_job)
+  * [Job_service.cancel_nas_job](#job_service.cancel_nas_job)
   * [Job_service.create_batch_prediction_job](#job_service.create_batch_prediction_job)
   * [Job_service.create_custom_job](#job_service.create_custom_job)
   * [Job_service.create_data_labeling_job](#job_service.create_data_labeling_job)
   * [Job_service.create_hyperparameter_tuning_job](#job_service.create_hyperparameter_tuning_job)
   * [Job_service.create_model_deployment_monitoring_job](#job_service.create_model_deployment_monitoring_job)
+  * [Job_service.create_nas_job](#job_service.create_nas_job)
   * [Job_service.delete_batch_prediction_job](#job_service.delete_batch_prediction_job)
   * [Job_service.delete_custom_job](#job_service.delete_custom_job)
   * [Job_service.delete_data_labeling_job](#job_service.delete_data_labeling_job)
   * [Job_service.delete_hyperparameter_tuning_job](#job_service.delete_hyperparameter_tuning_job)
   * [Job_service.delete_model_deployment_monitoring_job](#job_service.delete_model_deployment_monitoring_job)
+  * [Job_service.delete_nas_job](#job_service.delete_nas_job)
   * [Job_service.get_batch_prediction_job](#job_service.get_batch_prediction_job)
   * [Job_service.get_custom_job](#job_service.get_custom_job)
   * [Job_service.get_data_labeling_job](#job_service.get_data_labeling_job)
   * [Job_service.get_hyperparameter_tuning_job](#job_service.get_hyperparameter_tuning_job)
   * [Job_service.get_model_deployment_monitoring_job](#job_service.get_model_deployment_monitoring_job)
+  * [Job_service.get_nas_job](#job_service.get_nas_job)
+  * [Job_service.get_nas_trial_detail](#job_service.get_nas_trial_detail)
   * [Job_service.list_batch_prediction_jobs](#job_service.list_batch_prediction_jobs)
   * [Job_service.list_custom_jobs](#job_service.list_custom_jobs)
   * [Job_service.list_data_labeling_jobs](#job_service.list_data_labeling_jobs)
   * [Job_service.list_hyperparameter_tuning_jobs](#job_service.list_hyperparameter_tuning_jobs)
   * [Job_service.list_model_deployment_monitoring_jobs](#job_service.list_model_deployment_monitoring_jobs)
+  * [Job_service.list_nas_jobs](#job_service.list_nas_jobs)
+  * [Job_service.list_nas_trial_details](#job_service.list_nas_trial_details)
   * [Job_service.pause_model_deployment_monitoring_job](#job_service.pause_model_deployment_monitoring_job)
   * [Job_service.resume_model_deployment_monitoring_job](#job_service.resume_model_deployment_monitoring_job)
   * [Job_service.search_model_deployment_monitoring_stats_anomalies](#job_service.search_model_deployment_monitoring_stats_anomalies)
@@ -131,7 +139,9 @@
   * [Metadata_service.update_execution](#metadata_service.update_execution)
   * [Migration_service.batch_migrate_resources](#migration_service.batch_migrate_resources)
   * [Migration_service.search_migratable_resources](#migration_service.search_migratable_resources)
+  * [Model_service.batch_import_evaluated_annotations](#model_service.batch_import_evaluated_annotations)
   * [Model_service.batch_import_model_evaluation_slices](#model_service.batch_import_model_evaluation_slices)
+  * [Model_service.copy_model](#model_service.copy_model)
   * [Model_service.delete_model](#model_service.delete_model)
   * [Model_service.delete_model_version](#model_service.delete_model_version)
   * [Model_service.export_model](#model_service.export_model)
@@ -275,30 +285,39 @@
   * [Job_service.cancel_custom_job](#job_service.cancel_custom_job)
   * [Job_service.cancel_data_labeling_job](#job_service.cancel_data_labeling_job)
   * [Job_service.cancel_hyperparameter_tuning_job](#job_service.cancel_hyperparameter_tuning_job)
+  * [Job_service.cancel_nas_job](#job_service.cancel_nas_job)
   * [Job_service.create_batch_prediction_job](#job_service.create_batch_prediction_job)
   * [Job_service.create_custom_job](#job_service.create_custom_job)
   * [Job_service.create_data_labeling_job](#job_service.create_data_labeling_job)
   * [Job_service.create_hyperparameter_tuning_job](#job_service.create_hyperparameter_tuning_job)
   * [Job_service.create_model_deployment_monitoring_job](#job_service.create_model_deployment_monitoring_job)
+  * [Job_service.create_nas_job](#job_service.create_nas_job)
   * [Job_service.delete_batch_prediction_job](#job_service.delete_batch_prediction_job)
   * [Job_service.delete_custom_job](#job_service.delete_custom_job)
   * [Job_service.delete_data_labeling_job](#job_service.delete_data_labeling_job)
   * [Job_service.delete_hyperparameter_tuning_job](#job_service.delete_hyperparameter_tuning_job)
   * [Job_service.delete_model_deployment_monitoring_job](#job_service.delete_model_deployment_monitoring_job)
+  * [Job_service.delete_nas_job](#job_service.delete_nas_job)
   * [Job_service.get_batch_prediction_job](#job_service.get_batch_prediction_job)
   * [Job_service.get_custom_job](#job_service.get_custom_job)
   * [Job_service.get_data_labeling_job](#job_service.get_data_labeling_job)
   * [Job_service.get_hyperparameter_tuning_job](#job_service.get_hyperparameter_tuning_job)
   * [Job_service.get_model_deployment_monitoring_job](#job_service.get_model_deployment_monitoring_job)
+  * [Job_service.get_nas_job](#job_service.get_nas_job)
+  * [Job_service.get_nas_trial_detail](#job_service.get_nas_trial_detail)
   * [Job_service.list_batch_prediction_jobs](#job_service.list_batch_prediction_jobs)
   * [Job_service.list_custom_jobs](#job_service.list_custom_jobs)
   * [Job_service.list_data_labeling_jobs](#job_service.list_data_labeling_jobs)
   * [Job_service.list_hyperparameter_tuning_jobs](#job_service.list_hyperparameter_tuning_jobs)
   * [Job_service.list_model_deployment_monitoring_jobs](#job_service.list_model_deployment_monitoring_jobs)
+  * [Job_service.list_nas_jobs](#job_service.list_nas_jobs)
+  * [Job_service.list_nas_trial_details](#job_service.list_nas_trial_details)
   * [Job_service.pause_model_deployment_monitoring_job](#job_service.pause_model_deployment_monitoring_job)
   * [Job_service.resume_model_deployment_monitoring_job](#job_service.resume_model_deployment_monitoring_job)
   * [Job_service.search_model_deployment_monitoring_stats_anomalies](#job_service.search_model_deployment_monitoring_stats_anomalies)
   * [Job_service.update_model_deployment_monitoring_job](#job_service.update_model_deployment_monitoring_job)
+  * [Match_service.find_neighbors](#match_service.find_neighbors)
+  * [Match_service.read_index_datapoints](#match_service.read_index_datapoints)
   * [Metadata_service.add_context_artifacts_and_executions](#metadata_service.add_context_artifacts_and_executions)
   * [Metadata_service.add_context_children](#metadata_service.add_context_children)
   * [Metadata_service.add_execution_events](#metadata_service.add_execution_events)
@@ -333,7 +352,9 @@
   * [Metadata_service.update_execution](#metadata_service.update_execution)
   * [Migration_service.batch_migrate_resources](#migration_service.batch_migrate_resources)
   * [Migration_service.search_migratable_resources](#migration_service.search_migratable_resources)
+  * [Model_service.batch_import_evaluated_annotations](#model_service.batch_import_evaluated_annotations)
   * [Model_service.batch_import_model_evaluation_slices](#model_service.batch_import_model_evaluation_slices)
+  * [Model_service.copy_model](#model_service.copy_model)
   * [Model_service.delete_model](#model_service.delete_model)
   * [Model_service.delete_model_version](#model_service.delete_model_version)
   * [Model_service.export_model](#model_service.export_model)
@@ -922,6 +943,23 @@ __Usage:__
 
 
 
+### Featurestore_service.delete_feature_values
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/featurestore_service.delete_feature_values.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/featurestore_service.delete_feature_values.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/featurestore_service.delete_feature_values.js`
+
+
+-----
+
+
+
+
 ### Featurestore_service.delete_featurestore
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/featurestore_service.delete_featurestore.js).
@@ -1466,6 +1504,23 @@ __Usage:__
 
 
 
+### Job_service.cancel_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.cancel_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.cancel_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.cancel_nas_job.js`
+
+
+-----
+
+
+
+
 ### Job_service.create_batch_prediction_job
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.create_batch_prediction_job.js).
@@ -1544,6 +1599,23 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1/job_service.create_model_deployment_monitoring_job.js`
+
+
+-----
+
+
+
+
+### Job_service.create_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.create_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.create_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.create_nas_job.js`
 
 
 -----
@@ -1636,6 +1708,23 @@ __Usage:__
 
 
 
+### Job_service.delete_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.delete_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.delete_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.delete_nas_job.js`
+
+
+-----
+
+
+
+
 ### Job_service.get_batch_prediction_job
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_batch_prediction_job.js).
@@ -1721,6 +1810,40 @@ __Usage:__
 
 
 
+### Job_service.get_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_nas_job.js`
+
+
+-----
+
+
+
+
+### Job_service.get_nas_trial_detail
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_nas_trial_detail.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_nas_trial_detail.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.get_nas_trial_detail.js`
+
+
+-----
+
+
+
+
 ### Job_service.list_batch_prediction_jobs
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_batch_prediction_jobs.js).
@@ -1799,6 +1922,40 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_model_deployment_monitoring_jobs.js`
+
+
+-----
+
+
+
+
+### Job_service.list_nas_jobs
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_nas_jobs.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_nas_jobs.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_nas_jobs.js`
+
+
+-----
+
+
+
+
+### Job_service.list_nas_trial_details
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_nas_trial_details.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_nas_trial_details.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/job_service.list_nas_trial_details.js`
 
 
 -----
@@ -2452,6 +2609,23 @@ __Usage:__
 
 
 
+### Model_service.batch_import_evaluated_annotations
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/model_service.batch_import_evaluated_annotations.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/model_service.batch_import_evaluated_annotations.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/model_service.batch_import_evaluated_annotations.js`
+
+
+-----
+
+
+
+
 ### Model_service.batch_import_model_evaluation_slices
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/model_service.batch_import_model_evaluation_slices.js).
@@ -2462,6 +2636,23 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1/model_service.batch_import_model_evaluation_slices.js`
+
+
+-----
+
+
+
+
+### Model_service.copy_model
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1/model_service.copy_model.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1/model_service.copy_model.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1/model_service.copy_model.js`
 
 
 -----
@@ -4900,6 +5091,23 @@ __Usage:__
 
 
 
+### Job_service.cancel_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.cancel_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.cancel_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.cancel_nas_job.js`
+
+
+-----
+
+
+
+
 ### Job_service.create_batch_prediction_job
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.create_batch_prediction_job.js).
@@ -4978,6 +5186,23 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.create_model_deployment_monitoring_job.js`
+
+
+-----
+
+
+
+
+### Job_service.create_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.create_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.create_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.create_nas_job.js`
 
 
 -----
@@ -5070,6 +5295,23 @@ __Usage:__
 
 
 
+### Job_service.delete_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.delete_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.delete_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.delete_nas_job.js`
+
+
+-----
+
+
+
+
 ### Job_service.get_batch_prediction_job
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_batch_prediction_job.js).
@@ -5148,6 +5390,40 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_model_deployment_monitoring_job.js`
+
+
+-----
+
+
+
+
+### Job_service.get_nas_job
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_nas_job.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_nas_job.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_nas_job.js`
+
+
+-----
+
+
+
+
+### Job_service.get_nas_trial_detail
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_nas_trial_detail.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_nas_trial_detail.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.get_nas_trial_detail.js`
 
 
 -----
@@ -5240,6 +5516,40 @@ __Usage:__
 
 
 
+### Job_service.list_nas_jobs
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.list_nas_jobs.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.list_nas_jobs.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.list_nas_jobs.js`
+
+
+-----
+
+
+
+
+### Job_service.list_nas_trial_details
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.list_nas_trial_details.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.list_nas_trial_details.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.list_nas_trial_details.js`
+
+
+-----
+
+
+
+
 ### Job_service.pause_model_deployment_monitoring_job
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.pause_model_deployment_monitoring_job.js).
@@ -5301,6 +5611,40 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1beta1/job_service.update_model_deployment_monitoring_job.js`
+
+
+-----
+
+
+
+
+### Match_service.find_neighbors
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/match_service.find_neighbors.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/match_service.find_neighbors.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/match_service.find_neighbors.js`
+
+
+-----
+
+
+
+
+### Match_service.read_index_datapoints
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/match_service.read_index_datapoints.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/match_service.read_index_datapoints.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/match_service.read_index_datapoints.js`
 
 
 -----
@@ -5886,6 +6230,23 @@ __Usage:__
 
 
 
+### Model_service.batch_import_evaluated_annotations
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.batch_import_evaluated_annotations.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.batch_import_evaluated_annotations.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.batch_import_evaluated_annotations.js`
+
+
+-----
+
+
+
+
 ### Model_service.batch_import_model_evaluation_slices
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.batch_import_model_evaluation_slices.js).
@@ -5896,6 +6257,23 @@ __Usage:__
 
 
 `node packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.batch_import_model_evaluation_slices.js`
+
+
+-----
+
+
+
+
+### Model_service.copy_model
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.copy_model.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.copy_model.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-cloud-aiplatform/samples/generated/v1beta1/model_service.copy_model.js`
 
 
 -----

@@ -10,7 +10,7 @@
                   "nested": {
                     "v1": {
                       "options": {
-                        "go_package": "google.golang.org/genproto/googleapis/cloud/video/transcoder/v1;transcoder",
+                        "go_package": "cloud.google.com/go/video/transcoder/apiv1/transcoderpb;transcoderpb",
                         "java_multiple_files": true,
                         "java_outer_classname": "ServicesProto",
                         "java_package": "com.google.cloud.video.transcoder.v1",
@@ -1020,6 +1020,14 @@
                             "sampleRateHertz": {
                               "type": "int32",
                               "id": 6
+                            },
+                            "languageCode": {
+                              "type": "string",
+                              "id": 7
+                            },
+                            "displayName": {
+                              "type": "string",
+                              "id": 8
                             }
                           },
                           "nested": {
@@ -1074,10 +1082,18 @@
                               "type": "string",
                               "id": 1
                             },
+                            "languageCode": {
+                              "type": "string",
+                              "id": 2
+                            },
                             "mapping": {
                               "rule": "repeated",
                               "type": "TextMapping",
                               "id": 3
+                            },
+                            "displayName": {
+                              "type": "string",
+                              "id": 4
                             }
                           },
                           "nested": {

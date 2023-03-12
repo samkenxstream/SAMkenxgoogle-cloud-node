@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/nodejs-vision?activeTab=versions
 
+## [3.1.2](https://github.com/googleapis/google-cloud-node/compare/vision-v3.1.1...vision-v3.1.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3990](https://github.com/googleapis/google-cloud-node/issues/3990)) ([878c55d](https://github.com/googleapis/google-cloud-node/commit/878c55d62af7e41e8d5050b081e4b79202b1b9cc))
+
+## [3.1.1](https://github.com/googleapis/google-cloud-node/compare/vision-v3.1.0...vision-v3.1.1) (2023-01-28)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency redis to ~4.6.0 ([#3896](https://github.com/googleapis/google-cloud-node/issues/3896)) ([7c1bac8](https://github.com/googleapis/google-cloud-node/commit/7c1bac8a6509634b4011b783bf6895aead1b5f3b))
+
 ## [3.1.0](https://github.com/googleapis/nodejs-vision/compare/v3.0.1...v3.1.0) (2023-01-14)
 
 

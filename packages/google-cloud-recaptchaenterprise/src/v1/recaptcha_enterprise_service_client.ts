@@ -1,4 +1,4 @@
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -386,7 +386,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Assessment]{@link google.cloud.recaptchaenterprise.v1.Assessment}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.Assessment | Assessment}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -483,11 +483,12 @@ export class RecaptchaEnterpriseServiceClient {
    *   Required. The resource name of the Assessment, in the format
    *   "projects/{project}/assessments/{assessment}".
    * @param {google.cloud.recaptchaenterprise.v1.AnnotateAssessmentRequest.Annotation} [request.annotation]
-   *   Optional. The annotation that will be assigned to the Event. This field can be left
-   *   empty to provide reasons that apply to an event without concluding whether
-   *   the event is legitimate or fraudulent.
+   *   Optional. The annotation that will be assigned to the Event. This field can
+   *   be left empty to provide reasons that apply to an event without concluding
+   *   whether the event is legitimate or fraudulent.
    * @param {number[]} [request.reasons]
-   *   Optional. Optional reasons for the annotation that will be assigned to the Event.
+   *   Optional. Optional reasons for the annotation that will be assigned to the
+   *   Event.
    * @param {Buffer} [request.hashedAccountId]
    *   Optional. Unique stable hashed user identifier to apply to the assessment.
    *   This is an alternative to setting the hashed_account_id in
@@ -497,7 +498,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [AnnotateAssessmentResponse]{@link google.cloud.recaptchaenterprise.v1.AnnotateAssessmentResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.AnnotateAssessmentResponse | AnnotateAssessmentResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -597,7 +598,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Key]{@link google.cloud.recaptchaenterprise.v1.Key}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.Key | Key}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -686,12 +687,12 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.key
-   *   Required. The public key name linked to the requested secret key in the format
-   *   "projects/{project}/keys/{key}".
+   *   Required. The public key name linked to the requested secret key in the
+   *   format "projects/{project}/keys/{key}".
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [RetrieveLegacySecretKeyResponse]{@link google.cloud.recaptchaenterprise.v1.RetrieveLegacySecretKeyResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.RetrieveLegacySecretKeyResponse | RetrieveLegacySecretKeyResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -793,7 +794,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Key]{@link google.cloud.recaptchaenterprise.v1.Key}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.Key | Key}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -882,12 +883,12 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {google.cloud.recaptchaenterprise.v1.Key} request.key
    *   Required. The key to update.
    * @param {google.protobuf.FieldMask} [request.updateMask]
-   *   Optional. The mask to control which fields of the key get updated. If the mask is not
-   *   present, all fields will be updated.
+   *   Optional. The mask to control which fields of the key get updated. If the
+   *   mask is not present, all fields will be updated.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Key]{@link google.cloud.recaptchaenterprise.v1.Key}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.Key | Key}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -979,7 +980,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Empty]{@link google.protobuf.Empty}.
+   *   The first element of the array is an object representing {@link google.protobuf.Empty | Empty}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1073,10 +1074,19 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {string} request.name
    *   Required. The name of the key to be migrated, in the format
    *   "projects/{project}/keys/{key}".
+   * @param {boolean} [request.skipBillingCheck]
+   *   Optional. If true, skips the billing check.
+   *   A reCAPTCHA Enterprise key or migrated key behaves differently than a
+   *   reCAPTCHA (non-Enterprise version) key when you reach a quota limit (see
+   *   https://cloud.google.com/recaptcha-enterprise/quotas#quota_limit). To avoid
+   *   any disruption of your usage, we check that a billing account is present.
+   *   If your usage of reCAPTCHA is under the free quota, you can safely skip the
+   *   billing check and proceed with the migration. See
+   *   https://cloud.google.com/recaptcha-enterprise/docs/billing-information.
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Key]{@link google.cloud.recaptchaenterprise.v1.Key}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.Key | Key}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1169,7 +1179,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Metrics]{@link google.cloud.recaptchaenterprise.v1.Metrics}.
+   *   The first element of the array is an object representing {@link google.cloud.recaptchaenterprise.v1.Metrics | Metrics}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1268,7 +1278,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [Key]{@link google.cloud.recaptchaenterprise.v1.Key}.
+   *   The first element of the array is Array of {@link google.cloud.recaptchaenterprise.v1.Key | Key}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1369,7 +1379,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [Key]{@link google.cloud.recaptchaenterprise.v1.Key} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.recaptchaenterprise.v1.Key | Key} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listKeysAsync()`
@@ -1420,7 +1430,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Key]{@link google.cloud.recaptchaenterprise.v1.Key}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.recaptchaenterprise.v1.Key | Key}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1455,16 +1465,15 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The name of the project to list related account groups from, in the format
-   *   "projects/{project}".
+   *   Required. The name of the project to list related account groups from, in
+   *   the format "projects/{project}".
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of groups to return. The service might return fewer than
-   *   this value.
-   *   If unspecified, at most 50 groups are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of groups to return. The service might return
+   *   fewer than this value. If unspecified, at most 50 groups are returned. The
+   *   maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
-   *   Optional. A page token, received from a previous `ListRelatedAccountGroups` call.
-   *   Provide this to retrieve the subsequent page.
+   *   Optional. A page token, received from a previous `ListRelatedAccountGroups`
+   *   call. Provide this to retrieve the subsequent page.
    *
    *   When paginating, all other parameters provided to
    *   `ListRelatedAccountGroups` must match the call that provided the page
@@ -1472,7 +1481,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [RelatedAccountGroup]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroup}.
+   *   The first element of the array is Array of {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroup | RelatedAccountGroup}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1566,16 +1575,15 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The name of the project to list related account groups from, in the format
-   *   "projects/{project}".
+   *   Required. The name of the project to list related account groups from, in
+   *   the format "projects/{project}".
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of groups to return. The service might return fewer than
-   *   this value.
-   *   If unspecified, at most 50 groups are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of groups to return. The service might return
+   *   fewer than this value. If unspecified, at most 50 groups are returned. The
+   *   maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
-   *   Optional. A page token, received from a previous `ListRelatedAccountGroups` call.
-   *   Provide this to retrieve the subsequent page.
+   *   Optional. A page token, received from a previous `ListRelatedAccountGroups`
+   *   call. Provide this to retrieve the subsequent page.
    *
    *   When paginating, all other parameters provided to
    *   `ListRelatedAccountGroups` must match the call that provided the page
@@ -1583,7 +1591,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [RelatedAccountGroup]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroup} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroup | RelatedAccountGroup} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listRelatedAccountGroupsAsync()`
@@ -1621,16 +1629,15 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.parent
-   *   Required. The name of the project to list related account groups from, in the format
-   *   "projects/{project}".
+   *   Required. The name of the project to list related account groups from, in
+   *   the format "projects/{project}".
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of groups to return. The service might return fewer than
-   *   this value.
-   *   If unspecified, at most 50 groups are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of groups to return. The service might return
+   *   fewer than this value. If unspecified, at most 50 groups are returned. The
+   *   maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
-   *   Optional. A page token, received from a previous `ListRelatedAccountGroups` call.
-   *   Provide this to retrieve the subsequent page.
+   *   Optional. A page token, received from a previous `ListRelatedAccountGroups`
+   *   call. Provide this to retrieve the subsequent page.
    *
    *   When paginating, all other parameters provided to
    *   `ListRelatedAccountGroups` must match the call that provided the page
@@ -1640,7 +1647,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [RelatedAccountGroup]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroup}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroup | RelatedAccountGroup}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1678,13 +1685,12 @@ export class RecaptchaEnterpriseServiceClient {
    *   Required. The resource name for the related account group in the format
    *   `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of accounts to return. The service might return fewer
-   *   than this value.
-   *   If unspecified, at most 50 accounts are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of accounts to return. The service might
+   *   return fewer than this value. If unspecified, at most 50 accounts are
+   *   returned. The maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
-   *   Optional. A page token, received from a previous `ListRelatedAccountGroupMemberships`
-   *   call.
+   *   Optional. A page token, received from a previous
+   *   `ListRelatedAccountGroupMemberships` call.
    *
    *   When paginating, all other parameters provided to
    *   `ListRelatedAccountGroupMemberships` must match the call that provided the
@@ -1692,7 +1698,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [RelatedAccountGroupMembership]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership}.
+   *   The first element of the array is Array of {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership | RelatedAccountGroupMembership}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -1789,13 +1795,12 @@ export class RecaptchaEnterpriseServiceClient {
    *   Required. The resource name for the related account group in the format
    *   `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of accounts to return. The service might return fewer
-   *   than this value.
-   *   If unspecified, at most 50 accounts are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of accounts to return. The service might
+   *   return fewer than this value. If unspecified, at most 50 accounts are
+   *   returned. The maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
-   *   Optional. A page token, received from a previous `ListRelatedAccountGroupMemberships`
-   *   call.
+   *   Optional. A page token, received from a previous
+   *   `ListRelatedAccountGroupMemberships` call.
    *
    *   When paginating, all other parameters provided to
    *   `ListRelatedAccountGroupMemberships` must match the call that provided the
@@ -1803,7 +1808,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [RelatedAccountGroupMembership]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership | RelatedAccountGroupMembership} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listRelatedAccountGroupMembershipsAsync()`
@@ -1845,13 +1850,12 @@ export class RecaptchaEnterpriseServiceClient {
    *   Required. The resource name for the related account group in the format
    *   `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of accounts to return. The service might return fewer
-   *   than this value.
-   *   If unspecified, at most 50 accounts are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of accounts to return. The service might
+   *   return fewer than this value. If unspecified, at most 50 accounts are
+   *   returned. The maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
-   *   Optional. A page token, received from a previous `ListRelatedAccountGroupMemberships`
-   *   call.
+   *   Optional. A page token, received from a previous
+   *   `ListRelatedAccountGroupMemberships` call.
    *
    *   When paginating, all other parameters provided to
    *   `ListRelatedAccountGroupMemberships` must match the call that provided the
@@ -1861,7 +1865,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [RelatedAccountGroupMembership]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership | RelatedAccountGroupMembership}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -1897,17 +1901,17 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.project
-   *   Required. The name of the project to search related account group memberships from.
-   *   Specify the project name in the following format: "projects/{project}".
+   *   Required. The name of the project to search related account group
+   *   memberships from. Specify the project name in the following format:
+   *   "projects/{project}".
    * @param {Buffer} [request.hashedAccountId]
-   *   Optional. The unique stable hashed user identifier we should search connections to.
-   *   The identifier should correspond to a `hashed_account_id` provided in a
-   *   previous `CreateAssessment` or `AnnotateAssessment` call.
+   *   Optional. The unique stable hashed user identifier we should search
+   *   connections to. The identifier should correspond to a `hashed_account_id`
+   *   provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of groups to return. The service might return fewer than
-   *   this value.
-   *   If unspecified, at most 50 groups are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of groups to return. The service might return
+   *   fewer than this value. If unspecified, at most 50 groups are returned. The
+   *   maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
    *   Optional. A page token, received from a previous
    *   `SearchRelatedAccountGroupMemberships` call. Provide this to retrieve the
@@ -1919,7 +1923,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [RelatedAccountGroupMembership]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership}.
+   *   The first element of the array is Array of {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership | RelatedAccountGroupMembership}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -2013,17 +2017,17 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.project
-   *   Required. The name of the project to search related account group memberships from.
-   *   Specify the project name in the following format: "projects/{project}".
+   *   Required. The name of the project to search related account group
+   *   memberships from. Specify the project name in the following format:
+   *   "projects/{project}".
    * @param {Buffer} [request.hashedAccountId]
-   *   Optional. The unique stable hashed user identifier we should search connections to.
-   *   The identifier should correspond to a `hashed_account_id` provided in a
-   *   previous `CreateAssessment` or `AnnotateAssessment` call.
+   *   Optional. The unique stable hashed user identifier we should search
+   *   connections to. The identifier should correspond to a `hashed_account_id`
+   *   provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of groups to return. The service might return fewer than
-   *   this value.
-   *   If unspecified, at most 50 groups are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of groups to return. The service might return
+   *   fewer than this value. If unspecified, at most 50 groups are returned. The
+   *   maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
    *   Optional. A page token, received from a previous
    *   `SearchRelatedAccountGroupMemberships` call. Provide this to retrieve the
@@ -2035,7 +2039,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [RelatedAccountGroupMembership]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership | RelatedAccountGroupMembership} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `searchRelatedAccountGroupMembershipsAsync()`
@@ -2074,17 +2078,17 @@ export class RecaptchaEnterpriseServiceClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {string} request.project
-   *   Required. The name of the project to search related account group memberships from.
-   *   Specify the project name in the following format: "projects/{project}".
+   *   Required. The name of the project to search related account group
+   *   memberships from. Specify the project name in the following format:
+   *   "projects/{project}".
    * @param {Buffer} [request.hashedAccountId]
-   *   Optional. The unique stable hashed user identifier we should search connections to.
-   *   The identifier should correspond to a `hashed_account_id` provided in a
-   *   previous `CreateAssessment` or `AnnotateAssessment` call.
+   *   Optional. The unique stable hashed user identifier we should search
+   *   connections to. The identifier should correspond to a `hashed_account_id`
+   *   provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @param {number} [request.pageSize]
-   *   Optional. The maximum number of groups to return. The service might return fewer than
-   *   this value.
-   *   If unspecified, at most 50 groups are returned.
-   *   The maximum value is 1000; values above 1000 are coerced to 1000.
+   *   Optional. The maximum number of groups to return. The service might return
+   *   fewer than this value. If unspecified, at most 50 groups are returned. The
+   *   maximum value is 1000; values above 1000 are coerced to 1000.
    * @param {string} [request.pageToken]
    *   Optional. A page token, received from a previous
    *   `SearchRelatedAccountGroupMemberships` call. Provide this to retrieve the
@@ -2098,7 +2102,7 @@ export class RecaptchaEnterpriseServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [RelatedAccountGroupMembership]{@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMembership | RelatedAccountGroupMembership}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)

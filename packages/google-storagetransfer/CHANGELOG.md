@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.3.1](https://github.com/googleapis/google-cloud-node/compare/storage-transfer-v2.3.0...storage-transfer-v2.3.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3991](https://github.com/googleapis/google-cloud-node/issues/3991)) ([c6326d9](https://github.com/googleapis/google-cloud-node/commit/c6326d90abb9b649b25052e4afe7b3eb0f65bcb4))
+
+## [2.3.0](https://github.com/googleapis/google-cloud-node/compare/storage-transfer-v2.2.1...storage-transfer-v2.3.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3854](https://github.com/googleapis/google-cloud-node/issues/3854)) ([9e4b7f8](https://github.com/googleapis/google-cloud-node/commit/9e4b7f8d27dbb1ac011267f9b96ce90d2ff7a74b))
+
 ## [2.2.1](https://github.com/googleapis/nodejs-storage-transfer/compare/v2.2.0...v2.2.1) (2022-11-10)
 
 

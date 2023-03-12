@@ -18,11 +18,16 @@
   * [Analytics_admin_service.archive_custom_dimension](#analytics_admin_service.archive_custom_dimension)
   * [Analytics_admin_service.archive_custom_metric](#analytics_admin_service.archive_custom_metric)
   * [Analytics_admin_service.audit_user_links](#analytics_admin_service.audit_user_links)
+  * [Analytics_admin_service.batch_create_access_bindings](#analytics_admin_service.batch_create_access_bindings)
   * [Analytics_admin_service.batch_create_user_links](#analytics_admin_service.batch_create_user_links)
+  * [Analytics_admin_service.batch_delete_access_bindings](#analytics_admin_service.batch_delete_access_bindings)
   * [Analytics_admin_service.batch_delete_user_links](#analytics_admin_service.batch_delete_user_links)
+  * [Analytics_admin_service.batch_get_access_bindings](#analytics_admin_service.batch_get_access_bindings)
   * [Analytics_admin_service.batch_get_user_links](#analytics_admin_service.batch_get_user_links)
+  * [Analytics_admin_service.batch_update_access_bindings](#analytics_admin_service.batch_update_access_bindings)
   * [Analytics_admin_service.batch_update_user_links](#analytics_admin_service.batch_update_user_links)
   * [Analytics_admin_service.cancel_display_video360_advertiser_link_proposal](#analytics_admin_service.cancel_display_video360_advertiser_link_proposal)
+  * [Analytics_admin_service.create_access_binding](#analytics_admin_service.create_access_binding)
   * [Analytics_admin_service.create_audience](#analytics_admin_service.create_audience)
   * [Analytics_admin_service.create_conversion_event](#analytics_admin_service.create_conversion_event)
   * [Analytics_admin_service.create_custom_dimension](#analytics_admin_service.create_custom_dimension)
@@ -30,29 +35,37 @@
   * [Analytics_admin_service.create_data_stream](#analytics_admin_service.create_data_stream)
   * [Analytics_admin_service.create_display_video360_advertiser_link](#analytics_admin_service.create_display_video360_advertiser_link)
   * [Analytics_admin_service.create_display_video360_advertiser_link_proposal](#analytics_admin_service.create_display_video360_advertiser_link_proposal)
+  * [Analytics_admin_service.create_expanded_data_set](#analytics_admin_service.create_expanded_data_set)
   * [Analytics_admin_service.create_firebase_link](#analytics_admin_service.create_firebase_link)
   * [Analytics_admin_service.create_google_ads_link](#analytics_admin_service.create_google_ads_link)
   * [Analytics_admin_service.create_measurement_protocol_secret](#analytics_admin_service.create_measurement_protocol_secret)
   * [Analytics_admin_service.create_property](#analytics_admin_service.create_property)
+  * [Analytics_admin_service.create_search_ads360_link](#analytics_admin_service.create_search_ads360_link)
   * [Analytics_admin_service.create_user_link](#analytics_admin_service.create_user_link)
   * [Analytics_admin_service.create_web_data_stream](#analytics_admin_service.create_web_data_stream)
+  * [Analytics_admin_service.delete_access_binding](#analytics_admin_service.delete_access_binding)
   * [Analytics_admin_service.delete_account](#analytics_admin_service.delete_account)
   * [Analytics_admin_service.delete_android_app_data_stream](#analytics_admin_service.delete_android_app_data_stream)
   * [Analytics_admin_service.delete_conversion_event](#analytics_admin_service.delete_conversion_event)
   * [Analytics_admin_service.delete_data_stream](#analytics_admin_service.delete_data_stream)
   * [Analytics_admin_service.delete_display_video360_advertiser_link](#analytics_admin_service.delete_display_video360_advertiser_link)
   * [Analytics_admin_service.delete_display_video360_advertiser_link_proposal](#analytics_admin_service.delete_display_video360_advertiser_link_proposal)
+  * [Analytics_admin_service.delete_expanded_data_set](#analytics_admin_service.delete_expanded_data_set)
   * [Analytics_admin_service.delete_firebase_link](#analytics_admin_service.delete_firebase_link)
   * [Analytics_admin_service.delete_google_ads_link](#analytics_admin_service.delete_google_ads_link)
   * [Analytics_admin_service.delete_ios_app_data_stream](#analytics_admin_service.delete_ios_app_data_stream)
   * [Analytics_admin_service.delete_measurement_protocol_secret](#analytics_admin_service.delete_measurement_protocol_secret)
   * [Analytics_admin_service.delete_property](#analytics_admin_service.delete_property)
+  * [Analytics_admin_service.delete_search_ads360_link](#analytics_admin_service.delete_search_ads360_link)
   * [Analytics_admin_service.delete_user_link](#analytics_admin_service.delete_user_link)
   * [Analytics_admin_service.delete_web_data_stream](#analytics_admin_service.delete_web_data_stream)
+  * [Analytics_admin_service.fetch_automated_ga4_configuration_opt_out](#analytics_admin_service.fetch_automated_ga4_configuration_opt_out)
+  * [Analytics_admin_service.get_access_binding](#analytics_admin_service.get_access_binding)
   * [Analytics_admin_service.get_account](#analytics_admin_service.get_account)
   * [Analytics_admin_service.get_android_app_data_stream](#analytics_admin_service.get_android_app_data_stream)
   * [Analytics_admin_service.get_attribution_settings](#analytics_admin_service.get_attribution_settings)
   * [Analytics_admin_service.get_audience](#analytics_admin_service.get_audience)
+  * [Analytics_admin_service.get_big_query_link](#analytics_admin_service.get_big_query_link)
   * [Analytics_admin_service.get_conversion_event](#analytics_admin_service.get_conversion_event)
   * [Analytics_admin_service.get_custom_dimension](#analytics_admin_service.get_custom_dimension)
   * [Analytics_admin_service.get_custom_metric](#analytics_admin_service.get_custom_metric)
@@ -62,33 +75,41 @@
   * [Analytics_admin_service.get_display_video360_advertiser_link](#analytics_admin_service.get_display_video360_advertiser_link)
   * [Analytics_admin_service.get_display_video360_advertiser_link_proposal](#analytics_admin_service.get_display_video360_advertiser_link_proposal)
   * [Analytics_admin_service.get_enhanced_measurement_settings](#analytics_admin_service.get_enhanced_measurement_settings)
+  * [Analytics_admin_service.get_expanded_data_set](#analytics_admin_service.get_expanded_data_set)
   * [Analytics_admin_service.get_global_site_tag](#analytics_admin_service.get_global_site_tag)
   * [Analytics_admin_service.get_google_signals_settings](#analytics_admin_service.get_google_signals_settings)
   * [Analytics_admin_service.get_ios_app_data_stream](#analytics_admin_service.get_ios_app_data_stream)
   * [Analytics_admin_service.get_measurement_protocol_secret](#analytics_admin_service.get_measurement_protocol_secret)
   * [Analytics_admin_service.get_property](#analytics_admin_service.get_property)
+  * [Analytics_admin_service.get_search_ads360_link](#analytics_admin_service.get_search_ads360_link)
   * [Analytics_admin_service.get_user_link](#analytics_admin_service.get_user_link)
   * [Analytics_admin_service.get_web_data_stream](#analytics_admin_service.get_web_data_stream)
+  * [Analytics_admin_service.list_access_bindings](#analytics_admin_service.list_access_bindings)
   * [Analytics_admin_service.list_account_summaries](#analytics_admin_service.list_account_summaries)
   * [Analytics_admin_service.list_accounts](#analytics_admin_service.list_accounts)
   * [Analytics_admin_service.list_android_app_data_streams](#analytics_admin_service.list_android_app_data_streams)
   * [Analytics_admin_service.list_audiences](#analytics_admin_service.list_audiences)
+  * [Analytics_admin_service.list_big_query_links](#analytics_admin_service.list_big_query_links)
   * [Analytics_admin_service.list_conversion_events](#analytics_admin_service.list_conversion_events)
   * [Analytics_admin_service.list_custom_dimensions](#analytics_admin_service.list_custom_dimensions)
   * [Analytics_admin_service.list_custom_metrics](#analytics_admin_service.list_custom_metrics)
   * [Analytics_admin_service.list_data_streams](#analytics_admin_service.list_data_streams)
   * [Analytics_admin_service.list_display_video360_advertiser_link_proposals](#analytics_admin_service.list_display_video360_advertiser_link_proposals)
   * [Analytics_admin_service.list_display_video360_advertiser_links](#analytics_admin_service.list_display_video360_advertiser_links)
+  * [Analytics_admin_service.list_expanded_data_sets](#analytics_admin_service.list_expanded_data_sets)
   * [Analytics_admin_service.list_firebase_links](#analytics_admin_service.list_firebase_links)
   * [Analytics_admin_service.list_google_ads_links](#analytics_admin_service.list_google_ads_links)
   * [Analytics_admin_service.list_ios_app_data_streams](#analytics_admin_service.list_ios_app_data_streams)
   * [Analytics_admin_service.list_measurement_protocol_secrets](#analytics_admin_service.list_measurement_protocol_secrets)
   * [Analytics_admin_service.list_properties](#analytics_admin_service.list_properties)
+  * [Analytics_admin_service.list_search_ads360_links](#analytics_admin_service.list_search_ads360_links)
   * [Analytics_admin_service.list_user_links](#analytics_admin_service.list_user_links)
   * [Analytics_admin_service.list_web_data_streams](#analytics_admin_service.list_web_data_streams)
   * [Analytics_admin_service.provision_account_ticket](#analytics_admin_service.provision_account_ticket)
   * [Analytics_admin_service.run_access_report](#analytics_admin_service.run_access_report)
   * [Analytics_admin_service.search_change_history_events](#analytics_admin_service.search_change_history_events)
+  * [Analytics_admin_service.set_automated_ga4_configuration_opt_out](#analytics_admin_service.set_automated_ga4_configuration_opt_out)
+  * [Analytics_admin_service.update_access_binding](#analytics_admin_service.update_access_binding)
   * [Analytics_admin_service.update_account](#analytics_admin_service.update_account)
   * [Analytics_admin_service.update_android_app_data_stream](#analytics_admin_service.update_android_app_data_stream)
   * [Analytics_admin_service.update_attribution_settings](#analytics_admin_service.update_attribution_settings)
@@ -99,11 +120,13 @@
   * [Analytics_admin_service.update_data_stream](#analytics_admin_service.update_data_stream)
   * [Analytics_admin_service.update_display_video360_advertiser_link](#analytics_admin_service.update_display_video360_advertiser_link)
   * [Analytics_admin_service.update_enhanced_measurement_settings](#analytics_admin_service.update_enhanced_measurement_settings)
+  * [Analytics_admin_service.update_expanded_data_set](#analytics_admin_service.update_expanded_data_set)
   * [Analytics_admin_service.update_google_ads_link](#analytics_admin_service.update_google_ads_link)
   * [Analytics_admin_service.update_google_signals_settings](#analytics_admin_service.update_google_signals_settings)
   * [Analytics_admin_service.update_ios_app_data_stream](#analytics_admin_service.update_ios_app_data_stream)
   * [Analytics_admin_service.update_measurement_protocol_secret](#analytics_admin_service.update_measurement_protocol_secret)
   * [Analytics_admin_service.update_property](#analytics_admin_service.update_property)
+  * [Analytics_admin_service.update_search_ads360_link](#analytics_admin_service.update_search_ads360_link)
   * [Analytics_admin_service.update_user_link](#analytics_admin_service.update_user_link)
   * [Analytics_admin_service.update_web_data_stream](#analytics_admin_service.update_web_data_stream)
   * [Analytics_admin_service.acknowledge_user_data_collection](#analytics_admin_service.acknowledge_user_data_collection)
@@ -273,6 +296,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.batch_create_access_bindings
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_create_access_bindings.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_create_access_bindings.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_create_access_bindings.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.batch_create_user_links
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_create_user_links.js).
@@ -283,6 +323,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_create_user_links.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.batch_delete_access_bindings
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_delete_access_bindings.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_delete_access_bindings.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_delete_access_bindings.js`
 
 
 -----
@@ -307,6 +364,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.batch_get_access_bindings
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_get_access_bindings.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_get_access_bindings.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_get_access_bindings.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.batch_get_user_links
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_get_user_links.js).
@@ -317,6 +391,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_get_user_links.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.batch_update_access_bindings
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_update_access_bindings.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_update_access_bindings.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.batch_update_access_bindings.js`
 
 
 -----
@@ -351,6 +442,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.cancel_display_video360_advertiser_link_proposal.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.create_access_binding
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_access_binding.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_access_binding.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_access_binding.js`
 
 
 -----
@@ -477,6 +585,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.create_expanded_data_set
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_expanded_data_set.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_expanded_data_set.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_expanded_data_set.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.create_firebase_link
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_firebase_link.js).
@@ -545,6 +670,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.create_search_ads360_link
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_search_ads360_link.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_search_ads360_link.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_search_ads360_link.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.create_user_link
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_user_link.js).
@@ -572,6 +714,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.create_web_data_stream.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.delete_access_binding
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_access_binding.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_access_binding.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_access_binding.js`
 
 
 -----
@@ -681,6 +840,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.delete_expanded_data_set
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_expanded_data_set.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_expanded_data_set.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_expanded_data_set.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.delete_firebase_link
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_firebase_link.js).
@@ -766,6 +942,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.delete_search_ads360_link
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_search_ads360_link.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_search_ads360_link.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_search_ads360_link.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.delete_user_link
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_user_link.js).
@@ -793,6 +986,40 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.delete_web_data_stream.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.fetch_automated_ga4_configuration_opt_out
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.fetch_automated_ga4_configuration_opt_out.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.fetch_automated_ga4_configuration_opt_out.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.fetch_automated_ga4_configuration_opt_out.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.get_access_binding
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_access_binding.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_access_binding.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_access_binding.js`
 
 
 -----
@@ -861,6 +1088,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_audience.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.get_big_query_link
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_big_query_link.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_big_query_link.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_big_query_link.js`
 
 
 -----
@@ -1021,6 +1265,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.get_expanded_data_set
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_expanded_data_set.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_expanded_data_set.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_expanded_data_set.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.get_global_site_tag
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_global_site_tag.js).
@@ -1106,6 +1367,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.get_search_ads360_link
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_search_ads360_link.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_search_ads360_link.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_search_ads360_link.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.get_user_link
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_user_link.js).
@@ -1133,6 +1411,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.get_web_data_stream.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.list_access_bindings
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_access_bindings.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_access_bindings.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_access_bindings.js`
 
 
 -----
@@ -1201,6 +1496,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_audiences.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.list_big_query_links
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_big_query_links.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_big_query_links.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_big_query_links.js`
 
 
 -----
@@ -1310,6 +1622,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.list_expanded_data_sets
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_expanded_data_sets.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_expanded_data_sets.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_expanded_data_sets.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.list_firebase_links
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_firebase_links.js).
@@ -1395,6 +1724,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.list_search_ads360_links
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_search_ads360_links.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_search_ads360_links.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_search_ads360_links.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.list_user_links
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.list_user_links.js).
@@ -1473,6 +1819,40 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.search_change_history_events.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.set_automated_ga4_configuration_opt_out
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.set_automated_ga4_configuration_opt_out.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.set_automated_ga4_configuration_opt_out.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.set_automated_ga4_configuration_opt_out.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.update_access_binding
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_access_binding.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_access_binding.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_access_binding.js`
 
 
 -----
@@ -1650,6 +2030,23 @@ __Usage:__
 
 
 
+### Analytics_admin_service.update_expanded_data_set
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_expanded_data_set.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_expanded_data_set.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_expanded_data_set.js`
+
+
+-----
+
+
+
+
 ### Analytics_admin_service.update_google_ads_link
 
 View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_google_ads_link.js).
@@ -1728,6 +2125,23 @@ __Usage:__
 
 
 `node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_property.js`
+
+
+-----
+
+
+
+
+### Analytics_admin_service.update_search_ads360_link
+
+View the [source code](https://github.com/googleapis/google-cloud-node/blob/main/packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_search_ads360_link.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/google-cloud-node&page=editor&open_in_editor=packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_search_ads360_link.js,samples/README.md)
+
+__Usage:__
+
+
+`node packages/google-analytics-admin/samples/generated/v1alpha/analytics_admin_service.update_search_ads360_link.js`
 
 
 -----

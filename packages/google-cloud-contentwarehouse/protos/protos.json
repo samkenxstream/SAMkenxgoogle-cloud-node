@@ -8,7 +8,7 @@
               "nested": {
                 "v1": {
                   "options": {
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/contentwarehouse/v1;contentwarehouse",
+                    "go_package": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb;contentwarehousepb",
                     "java_multiple_files": true,
                     "java_outer_classname": "SynonymSetServiceRequestProto",
                     "java_package": "com.google.cloud.contentwarehouse.v1",
@@ -2508,7 +2508,7 @@
                 "v1": {
                   "options": {
                     "csharp_namespace": "Google.Cloud.DocumentAI.V1",
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/documentai/v1;documentai",
+                    "go_package": "cloud.google.com/go/documentai/apiv1/documentaipb;documentaipb",
                     "java_multiple_files": true,
                     "java_outer_classname": "GeometryProto",
                     "java_package": "com.google.cloud.documentai.v1",
@@ -3365,7 +3365,10 @@
                           "fields": {
                             "revision": {
                               "type": "int32",
-                              "id": 1
+                              "id": 1,
+                              "options": {
+                                "deprecated": true
+                              }
                             },
                             "id": {
                               "type": "int32",
@@ -3405,10 +3408,22 @@
                               }
                             },
                             "OperationType": {
+                              "valuesOptions": {
+                                "EVAL_REQUESTED": {
+                                  "deprecated": true
+                                },
+                                "EVAL_APPROVED": {
+                                  "deprecated": true
+                                },
+                                "EVAL_SKIPPED": {
+                                  "deprecated": true
+                                }
+                              },
                               "values": {
                                 "OPERATION_TYPE_UNSPECIFIED": 0,
                                 "ADD": 1,
                                 "REMOVE": 2,
+                                "UPDATE": 7,
                                 "REPLACE": 3,
                                 "EVAL_REQUESTED": 4,
                                 "EVAL_APPROVED": 5,

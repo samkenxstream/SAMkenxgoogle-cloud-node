@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.1](https://github.com/googleapis/google-cloud-node/compare/gkemulticloud-v0.3.0...gkemulticloud-v0.3.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [0.3.0](https://github.com/googleapis/google-cloud-node/compare/gkemulticloud-v0.2.0...gkemulticloud-v0.3.0) (2023-02-09)
+
+
+### Features
+
+* [gkemulticloud] Added support for Azure workload identity federation ([#3925](https://github.com/googleapis/google-cloud-node/issues/3925)) ([4876357](https://github.com/googleapis/google-cloud-node/commit/48763577ffe3a47a445c3c3f53a4801049f5d217))
+
 ## [0.2.0](https://github.com/googleapis/google-cloud-node/compare/gkemulticloud-v0.1.4...gkemulticloud-v0.2.0) (2022-12-21)
 
 

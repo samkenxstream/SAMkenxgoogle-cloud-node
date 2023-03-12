@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.2.1](https://github.com/googleapis/google-cloud-node/compare/iot-v3.2.0...iot-v3.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3988](https://github.com/googleapis/google-cloud-node/issues/3988)) ([f2134ed](https://github.com/googleapis/google-cloud-node/commit/f2134ed5f166a3bb7dd0bed556700f0b0fd9756a))
+
+## [3.2.0](https://github.com/googleapis/google-cloud-node/compare/iot-v3.1.2...iot-v3.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+
 ## [3.1.2](https://github.com/googleapis/nodejs-iot/compare/v3.1.1...v3.1.2) (2022-11-10)
 
 

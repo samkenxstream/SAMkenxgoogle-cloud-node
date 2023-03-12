@@ -9,7 +9,7 @@
                 "v1": {
                   "options": {
                     "csharp_namespace": "Google.Cloud.ContactCenterInsights.V1",
-                    "go_package": "google.golang.org/genproto/googleapis/cloud/contactcenterinsights/v1;contactcenterinsights",
+                    "go_package": "cloud.google.com/go/contactcenterinsights/apiv1/contactcenterinsightspb;contactcenterinsightspb",
                     "java_multiple_files": true,
                     "java_outer_classname": "ResourcesProto",
                     "java_package": "com.google.cloud.contactcenterinsights.v1",
@@ -1125,6 +1125,47 @@
                           "id": 4,
                           "options": {
                             "(google.api.field_behavior)": "OUTPUT_ONLY"
+                          }
+                        },
+                        "ingestConversationsStats": {
+                          "type": "IngestConversationsStats",
+                          "id": 5,
+                          "options": {
+                            "(google.api.field_behavior)": "OUTPUT_ONLY"
+                          }
+                        }
+                      },
+                      "nested": {
+                        "IngestConversationsStats": {
+                          "fields": {
+                            "processedObjectCount": {
+                              "type": "int32",
+                              "id": 1,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "duplicatesSkippedCount": {
+                              "type": "int32",
+                              "id": 2,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "successfulIngestCount": {
+                              "type": "int32",
+                              "id": 3,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "failedIngestCount": {
+                              "type": "int32",
+                              "id": 4,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            }
                           }
                         }
                       }
@@ -2545,6 +2586,13 @@
                             "(google.api.field_behavior)": "OUTPUT_ONLY"
                           }
                         },
+                        "issueCount": {
+                          "type": "int64",
+                          "id": 8,
+                          "options": {
+                            "(google.api.field_behavior)": "OUTPUT_ONLY"
+                          }
+                        },
                         "state": {
                           "type": "State",
                           "id": 5,
@@ -2870,6 +2918,10 @@
                             "runtimeIntegrationAnalysisPercentage": {
                               "type": "double",
                               "id": 1
+                            },
+                            "uploadConversationAnalysisPercentage": {
+                              "type": "double",
+                              "id": 6
                             },
                             "annotatorSelector": {
                               "type": "AnnotatorSelector",

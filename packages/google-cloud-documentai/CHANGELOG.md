@@ -1,5 +1,39 @@
 # Changelog
 
+## [7.1.0](https://github.com/googleapis/google-cloud-node/compare/documentai-v7.0.1...documentai-v7.1.0) (2023-02-22)
+
+
+### Features
+
+* [documentai] Added Training and Evaluation functions, request, responses and metadata to document_processor_service.proto ([#4008](https://github.com/googleapis/google-cloud-node/issues/4008)) ([f81218f](https://github.com/googleapis/google-cloud-node/commit/f81218fe90fb0ead2487c3e321e258edbde74039))
+
+## [7.0.1](https://github.com/googleapis/google-cloud-node/compare/documentai-v7.0.0...documentai-v7.0.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [7.0.0](https://github.com/googleapis/google-cloud-node/compare/documentai-v6.3.0...documentai-v7.0.0) (2023-02-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gitignore:** The TrainProcessorVersion parent was incorrectly annotated.
+
+### Miscellaneous Chores
+
+* **gitignore:** [documentai] feat: Added EvaluationReference to evaluation.proto ([#3954](https://github.com/googleapis/google-cloud-node/issues/3954)) ([9825fa9](https://github.com/googleapis/google-cloud-node/commit/9825fa99b94aad5cf1c1d6b3a858bc4e3ccfcb15))
+
+## [6.3.0](https://github.com/googleapis/google-cloud-node/compare/documentai-v6.2.0...documentai-v6.3.0) (2023-01-28)
+
+
+### Features
+
+* [documentai] added advanced_ocr_options field in OcrConfig ([#3890](https://github.com/googleapis/google-cloud-node/issues/3890)) ([babcf2f](https://github.com/googleapis/google-cloud-node/commit/babcf2fbe347fc278c321c0a08b124af05a3358b))
+* Added SuggestConversationSummary RPC ([#3852](https://github.com/googleapis/google-cloud-node/issues/3852)) ([d83d70a](https://github.com/googleapis/google-cloud-node/commit/d83d70a25f78812a44c4476b2149fbdef0a2baa1))
+* Exposed GetProcessorType to v1 ([#3856](https://github.com/googleapis/google-cloud-node/issues/3856)) ([1195e83](https://github.com/googleapis/google-cloud-node/commit/1195e833447ef2d448284b807ef1a8c3c8ff5f01))
+
 ## [6.2.0](https://github.com/googleapis/google-cloud-node/compare/documentai-v6.1.0...documentai-v6.2.0) (2022-12-16)
 
 

@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.5.0](https://github.com/googleapis/google-cloud-node/compare/video-transcoder-v2.4.1...video-transcoder-v2.5.0) (2023-03-01)
+
+
+### Features
+
+* [video-transcoder] Specifying language code and display name for text and audio streams is now supported ([#4035](https://github.com/googleapis/google-cloud-node/issues/4035)) ([73d846e](https://github.com/googleapis/google-cloud-node/commit/73d846e1aedc4103d25ae7e7dbecf7c4f5a8775a))
+
+## [2.4.1](https://github.com/googleapis/google-cloud-node/compare/video-transcoder-v2.4.0...video-transcoder-v2.4.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3990](https://github.com/googleapis/google-cloud-node/issues/3990)) ([878c55d](https://github.com/googleapis/google-cloud-node/commit/878c55d62af7e41e8d5050b081e4b79202b1b9cc))
+
+## [2.4.0](https://github.com/googleapis/google-cloud-node/compare/video-transcoder-v2.3.0...video-transcoder-v2.4.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3854](https://github.com/googleapis/google-cloud-node/issues/3854)) ([9e4b7f8](https://github.com/googleapis/google-cloud-node/commit/9e4b7f8d27dbb1ac011267f9b96ce90d2ff7a74b))
+
 ## [2.3.0](https://github.com/googleapis/google-cloud-node/compare/video-transcoder-v2.2.3...video-transcoder-v2.3.0) (2022-12-16)
 
 

@@ -1,5 +1,43 @@
 # Changelog
 
+## [3.4.1](https://github.com/googleapis/google-cloud-node/compare/dialogflow-cx-v3.4.0...dialogflow-cx-v3.4.1) (2023-03-06)
+
+
+### Bug Fixes
+
+* [dialogflow-cx] change java package of Cloud Build v2 ([#4055](https://github.com/googleapis/google-cloud-node/issues/4055)) ([26e5144](https://github.com/googleapis/google-cloud-node/commit/26e514417196042f68eb605d4e86d0733ae8047c))
+
+## [3.4.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-cx-v3.3.0...dialogflow-cx-v3.4.0) (2023-03-01)
+
+
+### Features
+
+* [dialogflow-cx] Added persist_parameter_changes field from `query_params` to MatchIntentRequest ([#4031](https://github.com/googleapis/google-cloud-node/issues/4031)) ([ebaed20](https://github.com/googleapis/google-cloud-node/commit/ebaed2007ee154ce8f9a604d023d5a5cd1ef7b81))
+
+## [3.3.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-cx-v3.2.1...dialogflow-cx-v3.3.0) (2023-02-23)
+
+
+### Features
+
+* [dialogflow-cx] added gcs.proto. added support for GcsDestination and TextToSpeechSettings ([#3998](https://github.com/googleapis/google-cloud-node/issues/3998)) ([f98ece2](https://github.com/googleapis/google-cloud-node/commit/f98ece2ab73b44cdab04892f9b0e81ef18995390))
+
+## [3.2.1](https://github.com/googleapis/google-cloud-node/compare/dialogflow-cx-v3.2.0...dialogflow-cx-v3.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3987](https://github.com/googleapis/google-cloud-node/issues/3987)) ([07043a6](https://github.com/googleapis/google-cloud-node/commit/07043a629545ad418f33f90f9f96147a136e1728))
+
+## [3.2.0](https://github.com/googleapis/google-cloud-node/compare/dialogflow-cx-v3.1.2...dialogflow-cx-v3.2.0) (2023-01-28)
+
+
+### Features
+
+* Added JSON_PACKAGE field to ExportAgentRequest ([#3876](https://github.com/googleapis/google-cloud-node/issues/3876)) ([638ba10](https://github.com/googleapis/google-cloud-node/commit/638ba10f7e8b3401300977dc231da7849d4b2ac3))
+* Added JSON_PACKAGE field to ExportAgentRequest ([#3882](https://github.com/googleapis/google-cloud-node/issues/3882)) ([cfe55a5](https://github.com/googleapis/google-cloud-node/commit/cfe55a5215815c3f9a4b58c6a06d5a261223d775))
+* ResponseMessage proto contains channel information ([#3843](https://github.com/googleapis/google-cloud-node/issues/3843)) ([fef1c23](https://github.com/googleapis/google-cloud-node/commit/fef1c23fb0b2875090afec555f32efaa417b16e4))
+* ResponseMessage proto contains channel information ([#3848](https://github.com/googleapis/google-cloud-node/issues/3848)) ([618fd54](https://github.com/googleapis/google-cloud-node/commit/618fd54fce8d95ba9a61200962f249f2ed65148e))
+
 ## [3.1.2](https://github.com/googleapis/nodejs-dialogflow-cx/compare/v3.1.1...v3.1.2) (2022-11-11)
 
 

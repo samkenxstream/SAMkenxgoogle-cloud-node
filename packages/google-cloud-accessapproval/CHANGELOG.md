@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.1](https://github.com/googleapis/google-cloud-node/compare/access-approval-v2.2.0...access-approval-v2.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3985](https://github.com/googleapis/google-cloud-node/issues/3985)) ([fb2a6fd](https://github.com/googleapis/google-cloud-node/commit/fb2a6fdbd9dcf2ae91b3767629d71f0970d0712c))
+
+## [2.2.0](https://github.com/googleapis/google-cloud-node/compare/access-approval-v2.1.2...access-approval-v2.2.0) (2023-01-28)
+
+
+### Features
+
+* Added Snooze API support ([#3832](https://github.com/googleapis/google-cloud-node/issues/3832)) ([f715797](https://github.com/googleapis/google-cloud-node/commit/f715797a46cdd2bf4dffc1a82378986941fd6d79))
+
 ## [2.1.2](https://github.com/googleapis/nodejs-access-approval/compare/v2.1.1...v2.1.2) (2022-11-11)
 
 

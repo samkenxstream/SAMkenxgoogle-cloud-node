@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/security-center?activeTab=versions
 
+## [7.2.1](https://github.com/googleapis/google-cloud-node/compare/security-center-v7.2.0...security-center-v7.2.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3989](https://github.com/googleapis/google-cloud-node/issues/3989)) ([95399f7](https://github.com/googleapis/google-cloud-node/commit/95399f731547b06cde5ed0914d89c59fdc9fd968))
+
+## [7.2.0](https://github.com/googleapis/google-cloud-node/compare/security-center-v7.1.0...security-center-v7.2.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3847](https://github.com/googleapis/google-cloud-node/issues/3847)) ([89dd991](https://github.com/googleapis/google-cloud-node/commit/89dd9916688f5865c776613aa2a9059abfdf4f17))
+
 ## [7.1.0](https://github.com/googleapis/google-cloud-node/compare/security-center-v7.0.0...security-center-v7.1.0) (2022-12-16)
 
 

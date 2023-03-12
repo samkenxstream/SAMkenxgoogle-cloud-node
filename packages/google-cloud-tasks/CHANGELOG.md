@@ -4,6 +4,20 @@
 
 [1]: https://www.npmjs.com/package/nodejs-tasks?activeTab=versions
 
+## [3.1.1](https://github.com/googleapis/google-cloud-node/compare/tasks-v3.1.0...tasks-v3.1.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3989](https://github.com/googleapis/google-cloud-node/issues/3989)) ([95399f7](https://github.com/googleapis/google-cloud-node/commit/95399f731547b06cde5ed0914d89c59fdc9fd968))
+
+## [3.1.0](https://github.com/googleapis/google-cloud-node/compare/tasks-v3.0.5...tasks-v3.1.0) (2023-01-28)
+
+
+### Features
+
+* Added SuggestConversationSummary RPC ([#3853](https://github.com/googleapis/google-cloud-node/issues/3853)) ([cc352db](https://github.com/googleapis/google-cloud-node/commit/cc352db97f3bd8925bf1a7631a0ae64ff976fa4e))
+
 ## [3.0.5](https://github.com/googleapis/nodejs-tasks/compare/v3.0.4...v3.0.5) (2022-11-10)
 
 

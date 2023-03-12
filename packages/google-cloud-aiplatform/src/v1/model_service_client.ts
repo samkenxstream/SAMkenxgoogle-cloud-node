@@ -263,6 +263,12 @@ export class ModelServiceClient {
       modelEvaluationSlicePathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}'
       ),
+      nasJobPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/nasJobs/{nas_job}'
+      ),
+      nasTrialDetailPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}'
+      ),
       pipelineJobPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}'
       ),
@@ -468,6 +474,9 @@ export class ModelServiceClient {
               post: '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}:cancel',
             },
             {
+              post: '/ui/{name=projects/*/locations/*/schedules/*/operations/*}:cancel',
+            },
+            {
               post: '/ui/{name=projects/*/locations/*/specialistPools/*/operations/*}:cancel',
             },
             {
@@ -665,6 +674,10 @@ export class ModelServiceClient {
             {
               delete:
                 '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}',
+            },
+            {
+              delete:
+                '/ui/{name=projects/*/locations/*/schedules/*/operations/*}',
             },
             {
               delete:
@@ -867,6 +880,7 @@ export class ModelServiceClient {
             {
               get: '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}',
             },
+            {get: '/ui/{name=projects/*/locations/*/schedules/*/operations/*}'},
             {
               get: '/ui/{name=projects/*/locations/*/specialistPools/*/operations/*}',
             },
@@ -1021,6 +1035,7 @@ export class ModelServiceClient {
             {
               get: '/ui/{name=projects/*/locations/*/pipelineJobs/*}/operations',
             },
+            {get: '/ui/{name=projects/*/locations/*/schedules/*}/operations'},
             {
               get: '/ui/{name=projects/*/locations/*/specialistPools/*}/operations',
             },
@@ -1188,6 +1203,9 @@ export class ModelServiceClient {
               post: '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}:wait',
             },
             {
+              post: '/ui/{name=projects/*/locations/*/schedules/*/operations/*}:wait',
+            },
+            {
               post: '/ui/{name=projects/*/locations/*/specialistPools/*/operations/*}:wait',
             },
             {
@@ -1318,6 +1336,12 @@ export class ModelServiceClient {
     const exportModelMetadata = protoFilesRoot.lookup(
       '.google.cloud.aiplatform.v1.ExportModelOperationMetadata'
     ) as gax.protobuf.Type;
+    const copyModelResponse = protoFilesRoot.lookup(
+      '.google.cloud.aiplatform.v1.CopyModelResponse'
+    ) as gax.protobuf.Type;
+    const copyModelMetadata = protoFilesRoot.lookup(
+      '.google.cloud.aiplatform.v1.CopyModelOperationMetadata'
+    ) as gax.protobuf.Type;
 
     this.descriptors.longrunning = {
       uploadModel: new this._gaxModule.LongrunningDescriptor(
@@ -1339,6 +1363,11 @@ export class ModelServiceClient {
         this.operationsClient,
         exportModelResponse.decode.bind(exportModelResponse),
         exportModelMetadata.decode.bind(exportModelMetadata)
+      ),
+      copyModel: new this._gaxModule.LongrunningDescriptor(
+        this.operationsClient,
+        copyModelResponse.decode.bind(copyModelResponse),
+        copyModelMetadata.decode.bind(copyModelMetadata)
       ),
     };
 
@@ -1401,8 +1430,10 @@ export class ModelServiceClient {
       'deleteModelVersion',
       'mergeVersionAliases',
       'exportModel',
+      'copyModel',
       'importModelEvaluation',
       'batchImportModelEvaluationSlices',
+      'batchImportEvaluatedAnnotations',
       'getModelEvaluation',
       'listModelEvaluations',
       'getModelEvaluationSlice',
@@ -1514,7 +1545,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Model]{@link google.cloud.aiplatform.v1.Model}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.Model | Model}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1618,7 +1649,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Model]{@link google.cloud.aiplatform.v1.Model}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.Model | Model}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1719,7 +1750,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Model]{@link google.cloud.aiplatform.v1.Model}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.Model | Model}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1813,7 +1844,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [ModelEvaluation]{@link google.cloud.aiplatform.v1.ModelEvaluation}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.ModelEvaluation | ModelEvaluation}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1914,7 +1945,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [BatchImportModelEvaluationSlicesResponse]{@link google.cloud.aiplatform.v1.BatchImportModelEvaluationSlicesResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.BatchImportModelEvaluationSlicesResponse | BatchImportModelEvaluationSlicesResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -2006,6 +2037,111 @@ export class ModelServiceClient {
     );
   }
   /**
+   * Imports a list of externally generated EvaluatedAnnotations.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} request.parent
+   *   Required. The name of the parent ModelEvaluationSlice resource.
+   *   Format:
+   *   `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+   * @param {number[]} request.evaluatedAnnotations
+   *   Required. Evaluated annotations resource to be imported.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.BatchImportEvaluatedAnnotationsResponse | BatchImportEvaluatedAnnotationsResponse}.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
+   *   for more details and examples.
+   * @example <caption>include:samples/generated/v1/model_service.batch_import_evaluated_annotations.js</caption>
+   * region_tag:aiplatform_v1_generated_ModelService_BatchImportEvaluatedAnnotations_async
+   */
+  batchImportEvaluatedAnnotations(
+    request?: protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest,
+    options?: CallOptions
+  ): Promise<
+    [
+      protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsResponse,
+      (
+        | protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  >;
+  batchImportEvaluatedAnnotations(
+    request: protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest,
+    options: CallOptions,
+    callback: Callback<
+      protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsResponse,
+      | protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  batchImportEvaluatedAnnotations(
+    request: protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest,
+    callback: Callback<
+      protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsResponse,
+      | protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  batchImportEvaluatedAnnotations(
+    request?: protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest,
+    optionsOrCallback?:
+      | CallOptions
+      | Callback<
+          protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsResponse,
+          | protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest
+          | null
+          | undefined,
+          {} | null | undefined
+        >,
+    callback?: Callback<
+      protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsResponse,
+      | protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest
+      | null
+      | undefined,
+      {} | null | undefined
+    >
+  ): Promise<
+    [
+      protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsResponse,
+      (
+        | protos.google.cloud.aiplatform.v1.IBatchImportEvaluatedAnnotationsRequest
+        | undefined
+      ),
+      {} | undefined
+    ]
+  > | void {
+    request = request || {};
+    let options: CallOptions;
+    if (typeof optionsOrCallback === 'function' && callback === undefined) {
+      callback = optionsOrCallback;
+      options = {};
+    } else {
+      options = optionsOrCallback as CallOptions;
+    }
+    options = options || {};
+    options.otherArgs = options.otherArgs || {};
+    options.otherArgs.headers = options.otherArgs.headers || {};
+    options.otherArgs.headers['x-goog-request-params'] =
+      this._gaxModule.routingHeader.fromParams({
+        parent: request.parent ?? '',
+      });
+    this.initialize();
+    return this.innerApiCalls.batchImportEvaluatedAnnotations(
+      request,
+      options,
+      callback
+    );
+  }
+  /**
    * Gets a ModelEvaluation.
    *
    * @param {Object} request
@@ -2017,7 +2153,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [ModelEvaluation]{@link google.cloud.aiplatform.v1.ModelEvaluation}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.ModelEvaluation | ModelEvaluation}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -2110,7 +2246,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [ModelEvaluationSlice]{@link google.cloud.aiplatform.v1.ModelEvaluationSlice}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1.ModelEvaluationSlice | ModelEvaluationSlice}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -2509,8 +2645,9 @@ export class ModelServiceClient {
   /**
    * Deletes a Model version.
    *
-   * Model version can only be deleted if there are no {@link |DeployedModels}
-   * created from it. Deleting the only version in the Model is not allowed. Use
+   * Model version can only be deleted if there are no
+   * {@link google.cloud.aiplatform.v1.DeployedModel|DeployedModels} created from it.
+   * Deleting the only version in the Model is not allowed. Use
    * {@link google.cloud.aiplatform.v1.ModelService.DeleteModel|DeleteModel} for
    * deleting the Model instead.
    *
@@ -2798,6 +2935,167 @@ export class ModelServiceClient {
     >;
   }
   /**
+   * Copies an already existing Vertex AI Model into the specified Location.
+   * The source Model must exist in the same Project.
+   * When copying custom Models, the users themselves are responsible for
+   * {@link google.cloud.aiplatform.v1.Model.metadata|Model.metadata} content to be
+   * region-agnostic, as well as making sure that any resources (e.g. files) it
+   * depends on remain accessible.
+   *
+   * @param {Object} request
+   *   The request object that will be sent.
+   * @param {string} [request.modelId]
+   *   Optional. Copy source_model into a new Model with this ID. The ID will
+   *   become the final component of the model resource name.
+   *
+   *   This value may be up to 63 characters, and valid characters are
+   *   `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+   * @param {string} [request.parentModel]
+   *   Optional. Specify this field to copy source_model into this existing
+   *   Model as a new version. Format:
+   *   `projects/{project}/locations/{location}/models/{model}`
+   * @param {string} request.parent
+   *   Required. The resource name of the Location into which to copy the Model.
+   *   Format: `projects/{project}/locations/{location}`
+   * @param {string} request.sourceModel
+   *   Required. The resource name of the Model to copy. That Model must be in the
+   *   same Project. Format:
+   *   `projects/{project}/locations/{location}/models/{model}`
+   * @param {google.cloud.aiplatform.v1.EncryptionSpec} request.encryptionSpec
+   *   Customer-managed encryption key options. If this is set,
+   *   then the Model copy will be encrypted with the provided encryption key.
+   * @param {object} [options]
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   * @returns {Promise} - The promise which resolves to an array.
+   *   The first element of the array is an object representing
+   *   a long running operation. Its `promise()` method returns a promise
+   *   you can `await` for.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations)
+   *   for more details and examples.
+   * @example <caption>include:samples/generated/v1/model_service.copy_model.js</caption>
+   * region_tag:aiplatform_v1_generated_ModelService_CopyModel_async
+   */
+  copyModel(
+    request?: protos.google.cloud.aiplatform.v1.ICopyModelRequest,
+    options?: CallOptions
+  ): Promise<
+    [
+      LROperation<
+        protos.google.cloud.aiplatform.v1.ICopyModelResponse,
+        protos.google.cloud.aiplatform.v1.ICopyModelOperationMetadata
+      >,
+      protos.google.longrunning.IOperation | undefined,
+      {} | undefined
+    ]
+  >;
+  copyModel(
+    request: protos.google.cloud.aiplatform.v1.ICopyModelRequest,
+    options: CallOptions,
+    callback: Callback<
+      LROperation<
+        protos.google.cloud.aiplatform.v1.ICopyModelResponse,
+        protos.google.cloud.aiplatform.v1.ICopyModelOperationMetadata
+      >,
+      protos.google.longrunning.IOperation | null | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  copyModel(
+    request: protos.google.cloud.aiplatform.v1.ICopyModelRequest,
+    callback: Callback<
+      LROperation<
+        protos.google.cloud.aiplatform.v1.ICopyModelResponse,
+        protos.google.cloud.aiplatform.v1.ICopyModelOperationMetadata
+      >,
+      protos.google.longrunning.IOperation | null | undefined,
+      {} | null | undefined
+    >
+  ): void;
+  copyModel(
+    request?: protos.google.cloud.aiplatform.v1.ICopyModelRequest,
+    optionsOrCallback?:
+      | CallOptions
+      | Callback<
+          LROperation<
+            protos.google.cloud.aiplatform.v1.ICopyModelResponse,
+            protos.google.cloud.aiplatform.v1.ICopyModelOperationMetadata
+          >,
+          protos.google.longrunning.IOperation | null | undefined,
+          {} | null | undefined
+        >,
+    callback?: Callback<
+      LROperation<
+        protos.google.cloud.aiplatform.v1.ICopyModelResponse,
+        protos.google.cloud.aiplatform.v1.ICopyModelOperationMetadata
+      >,
+      protos.google.longrunning.IOperation | null | undefined,
+      {} | null | undefined
+    >
+  ): Promise<
+    [
+      LROperation<
+        protos.google.cloud.aiplatform.v1.ICopyModelResponse,
+        protos.google.cloud.aiplatform.v1.ICopyModelOperationMetadata
+      >,
+      protos.google.longrunning.IOperation | undefined,
+      {} | undefined
+    ]
+  > | void {
+    request = request || {};
+    let options: CallOptions;
+    if (typeof optionsOrCallback === 'function' && callback === undefined) {
+      callback = optionsOrCallback;
+      options = {};
+    } else {
+      options = optionsOrCallback as CallOptions;
+    }
+    options = options || {};
+    options.otherArgs = options.otherArgs || {};
+    options.otherArgs.headers = options.otherArgs.headers || {};
+    options.otherArgs.headers['x-goog-request-params'] =
+      this._gaxModule.routingHeader.fromParams({
+        parent: request.parent ?? '',
+      });
+    this.initialize();
+    return this.innerApiCalls.copyModel(request, options, callback);
+  }
+  /**
+   * Check the status of the long running operation returned by `copyModel()`.
+   * @param {String} name
+   *   The operation name that will be passed.
+   * @returns {Promise} - The promise which resolves to an object.
+   *   The decoded operation object has result and metadata field to get information from.
+   *   Please see the
+   *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations)
+   *   for more details and examples.
+   * @example <caption>include:samples/generated/v1/model_service.copy_model.js</caption>
+   * region_tag:aiplatform_v1_generated_ModelService_CopyModel_async
+   */
+  async checkCopyModelProgress(
+    name: string
+  ): Promise<
+    LROperation<
+      protos.google.cloud.aiplatform.v1.CopyModelResponse,
+      protos.google.cloud.aiplatform.v1.CopyModelOperationMetadata
+    >
+  > {
+    const request =
+      new this._gaxModule.operationsProtos.google.longrunning.GetOperationRequest(
+        {name}
+      );
+    const [operation] = await this.operationsClient.getOperation(request);
+    const decodeOperation = new this._gaxModule.Operation(
+      operation,
+      this.descriptors.longrunning.copyModel,
+      this._gaxModule.createDefaultBackoffSettings()
+    );
+    return decodeOperation as LROperation<
+      protos.google.cloud.aiplatform.v1.CopyModelResponse,
+      protos.google.cloud.aiplatform.v1.CopyModelOperationMetadata
+    >;
+  }
+  /**
    * Lists Models in a Location.
    *
    * @param {Object} request
@@ -2847,7 +3145,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [Model]{@link google.cloud.aiplatform.v1.Model}.
+   *   The first element of the array is Array of {@link google.cloud.aiplatform.v1.Model | Model}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -2975,7 +3273,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [Model]{@link google.cloud.aiplatform.v1.Model} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.aiplatform.v1.Model | Model} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listModelsAsync()`
@@ -3059,7 +3357,7 @@ export class ModelServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Model]{@link google.cloud.aiplatform.v1.Model}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.aiplatform.v1.Model | Model}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -3128,7 +3426,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [Model]{@link google.cloud.aiplatform.v1.Model}.
+   *   The first element of the array is Array of {@link google.cloud.aiplatform.v1.Model | Model}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -3252,7 +3550,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [Model]{@link google.cloud.aiplatform.v1.Model} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.aiplatform.v1.Model | Model} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listModelVersionsAsync()`
@@ -3326,7 +3624,7 @@ export class ModelServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Model]{@link google.cloud.aiplatform.v1.Model}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.aiplatform.v1.Model | Model}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -3379,7 +3677,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [ModelEvaluation]{@link google.cloud.aiplatform.v1.ModelEvaluation}.
+   *   The first element of the array is Array of {@link google.cloud.aiplatform.v1.ModelEvaluation | ModelEvaluation}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -3487,7 +3785,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [ModelEvaluation]{@link google.cloud.aiplatform.v1.ModelEvaluation} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.aiplatform.v1.ModelEvaluation | ModelEvaluation} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listModelEvaluationsAsync()`
@@ -3545,7 +3843,7 @@ export class ModelServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [ModelEvaluation]{@link google.cloud.aiplatform.v1.ModelEvaluation}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.aiplatform.v1.ModelEvaluation | ModelEvaluation}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -3601,7 +3899,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [ModelEvaluationSlice]{@link google.cloud.aiplatform.v1.ModelEvaluationSlice}.
+   *   The first element of the array is Array of {@link google.cloud.aiplatform.v1.ModelEvaluationSlice | ModelEvaluationSlice}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -3716,7 +4014,7 @@ export class ModelServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [ModelEvaluationSlice]{@link google.cloud.aiplatform.v1.ModelEvaluationSlice} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.aiplatform.v1.ModelEvaluationSlice | ModelEvaluationSlice} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listModelEvaluationSlicesAsync()`
@@ -3777,7 +4075,7 @@ export class ModelServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [ModelEvaluationSlice]{@link google.cloud.aiplatform.v1.ModelEvaluationSlice}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.aiplatform.v1.ModelEvaluationSlice | ModelEvaluationSlice}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -3819,16 +4117,16 @@ export class ModelServiceClient {
    *   OPTIONAL: A `GetPolicyOptions` object for specifying options to
    *   `GetIamPolicy`. This field is only used by Cloud IAM.
    *
-   *   This object should have the same structure as [GetPolicyOptions]{@link google.iam.v1.GetPolicyOptions}
+   *   This object should have the same structure as {@link google.iam.v1.GetPolicyOptions | GetPolicyOptions}.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
-   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html} for the details.
+   *   retries, paginations, etc. See {@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html | gax.CallOptions} for the details.
    * @param {function(?Error, ?Object)} [callback]
    *   The function which will be called with the result of the API call.
    *
-   *   The second parameter to the callback is an object representing [Policy]{@link google.iam.v1.Policy}.
+   *   The second parameter to the callback is an object representing {@link google.iam.v1.Policy | Policy}.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Policy]{@link google.iam.v1.Policy}.
+   *   The first element of the array is an object representing {@link google.iam.v1.Policy | Policy}.
    *   The promise has a method named "cancel" which cancels the ongoing API call.
    */
   getIamPolicy(
@@ -3870,13 +4168,13 @@ export class ModelServiceClient {
    *   [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
-   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html} for the details.
+   *   retries, paginations, etc. See {@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html | gax.CallOptions} for the details.
    * @param {function(?Error, ?Object)} [callback]
    *   The function which will be called with the result of the API call.
    *
-   *   The second parameter to the callback is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The second parameter to the callback is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The first element of the array is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    *   The promise has a method named "cancel" which cancels the ongoing API call.
    */
   setIamPolicy(
@@ -3918,13 +4216,13 @@ export class ModelServiceClient {
    *   [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
-   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html} for the details.
+   *   retries, paginations, etc. See {@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html | gax.CallOptions} for the details.
    * @param {function(?Error, ?Object)} [callback]
    *   The function which will be called with the result of the API call.
    *
-   *   The second parameter to the callback is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The second parameter to the callback is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The first element of the array is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    *   The promise has a method named "cancel" which cancels the ongoing API call.
    *
    */
@@ -3954,9 +4252,9 @@ export class ModelServiceClient {
    * @param {string} request.name
    *   Resource name for the location.
    * @param {object} [options]
-   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html | CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Location]{@link google.cloud.location.Location}.
+   *   The first element of the array is an object representing {@link google.cloud.location.Location | Location}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -4006,7 +4304,7 @@ export class ModelServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Location]{@link google.cloud.location.Location}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.location.Location | Location}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -4035,20 +4333,18 @@ export class ModelServiceClient {
    * @param {string} request.name - The name of the operation resource.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   *   details.
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   *   for the details.
    * @param {function(?Error, ?Object)=} callback
    *   The function which will be called with the result of the API call.
    *
    *   The second parameter to the callback is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}.
+   *   {@link google.longrunning.Operation | google.longrunning.Operation}.
    * @return {Promise} - The promise which resolves to an array.
    *   The first element of the array is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}. The promise has a method named
-   * "cancel" which cancels the ongoing API call.
+   * {@link google.longrunning.Operation | google.longrunning.Operation}.
+   * The promise has a method named "cancel" which cancels the ongoing API call.
    *
    * @example
    * ```
@@ -4092,11 +4388,11 @@ export class ModelServiceClient {
    *   resources in a page.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    *   details.
    * @returns {Object}
-   *   An iterable Object that conforms to @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols.
+   *   An iterable Object that conforms to {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols | iteration protocols}.
    *
    * @example
    * ```
@@ -4127,8 +4423,8 @@ export class ModelServiceClient {
    * @param {string} request.name - The name of the operation resource to be cancelled.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    * details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
@@ -4170,9 +4466,9 @@ export class ModelServiceClient {
    * @param {string} request.name - The name of the operation resource to be deleted.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   * details.
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   * for the details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
    * @return {Promise} - The promise which resolves when API call finishes.
@@ -5728,6 +6024,130 @@ export class ModelServiceClient {
     return this.pathTemplates.modelEvaluationSlicePathTemplate.match(
       modelEvaluationSliceName
     ).slice;
+  }
+
+  /**
+   * Return a fully-qualified nasJob resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} nas_job
+   * @returns {string} Resource name string.
+   */
+  nasJobPath(project: string, location: string, nasJob: string) {
+    return this.pathTemplates.nasJobPathTemplate.render({
+      project: project,
+      location: location,
+      nas_job: nasJob,
+    });
+  }
+
+  /**
+   * Parse the project from NasJob resource.
+   *
+   * @param {string} nasJobName
+   *   A fully-qualified path representing NasJob resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromNasJobName(nasJobName: string) {
+    return this.pathTemplates.nasJobPathTemplate.match(nasJobName).project;
+  }
+
+  /**
+   * Parse the location from NasJob resource.
+   *
+   * @param {string} nasJobName
+   *   A fully-qualified path representing NasJob resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromNasJobName(nasJobName: string) {
+    return this.pathTemplates.nasJobPathTemplate.match(nasJobName).location;
+  }
+
+  /**
+   * Parse the nas_job from NasJob resource.
+   *
+   * @param {string} nasJobName
+   *   A fully-qualified path representing NasJob resource.
+   * @returns {string} A string representing the nas_job.
+   */
+  matchNasJobFromNasJobName(nasJobName: string) {
+    return this.pathTemplates.nasJobPathTemplate.match(nasJobName).nas_job;
+  }
+
+  /**
+   * Return a fully-qualified nasTrialDetail resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} nas_job
+   * @param {string} nas_trial_detail
+   * @returns {string} Resource name string.
+   */
+  nasTrialDetailPath(
+    project: string,
+    location: string,
+    nasJob: string,
+    nasTrialDetail: string
+  ) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.render({
+      project: project,
+      location: location,
+      nas_job: nasJob,
+      nas_trial_detail: nasTrialDetail,
+    });
+  }
+
+  /**
+   * Parse the project from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).project;
+  }
+
+  /**
+   * Parse the location from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).location;
+  }
+
+  /**
+   * Parse the nas_job from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the nas_job.
+   */
+  matchNasJobFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).nas_job;
+  }
+
+  /**
+   * Parse the nas_trial_detail from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the nas_trial_detail.
+   */
+  matchNasTrialDetailFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).nas_trial_detail;
   }
 
   /**

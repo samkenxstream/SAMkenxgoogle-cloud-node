@@ -266,6 +266,12 @@ export class IndexServiceClient {
       modelEvaluationSlicePathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}'
       ),
+      nasJobPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/nasJobs/{nas_job}'
+      ),
+      nasTrialDetailPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}'
+      ),
       pipelineJobPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}'
       ),
@@ -458,6 +464,9 @@ export class IndexServiceClient {
             },
             {
               post: '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}:cancel',
+            },
+            {
+              post: '/ui/{name=projects/*/locations/*/schedules/*/operations/*}:cancel',
             },
             {
               post: '/ui/{name=projects/*/locations/*/specialistPools/*/operations/*}:cancel',
@@ -668,6 +677,10 @@ export class IndexServiceClient {
             {
               delete:
                 '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}',
+            },
+            {
+              delete:
+                '/ui/{name=projects/*/locations/*/schedules/*/operations/*}',
             },
             {
               delete:
@@ -885,6 +898,7 @@ export class IndexServiceClient {
             {
               get: '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}',
             },
+            {get: '/ui/{name=projects/*/locations/*/schedules/*/operations/*}'},
             {
               get: '/ui/{name=projects/*/locations/*/specialistPools/*/operations/*}',
             },
@@ -1058,6 +1072,7 @@ export class IndexServiceClient {
             {
               get: '/ui/{name=projects/*/locations/*/pipelineJobs/*}/operations',
             },
+            {get: '/ui/{name=projects/*/locations/*/schedules/*}/operations'},
             {
               get: '/ui/{name=projects/*/locations/*/specialistPools/*}/operations',
             },
@@ -1242,6 +1257,9 @@ export class IndexServiceClient {
             },
             {
               post: '/ui/{name=projects/*/locations/*/pipelineJobs/*/operations/*}:wait',
+            },
+            {
+              post: '/ui/{name=projects/*/locations/*/schedules/*/operations/*}:wait',
             },
             {
               post: '/ui/{name=projects/*/locations/*/specialistPools/*/operations/*}:wait',
@@ -1551,7 +1569,7 @@ export class IndexServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Index]{@link google.cloud.aiplatform.v1beta1.Index}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1beta1.Index | Index}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1646,7 +1664,7 @@ export class IndexServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [UpsertDatapointsResponse]{@link google.cloud.aiplatform.v1beta1.UpsertDatapointsResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1beta1.UpsertDatapointsResponse | UpsertDatapointsResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -1747,7 +1765,7 @@ export class IndexServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [RemoveDatapointsResponse]{@link google.cloud.aiplatform.v1beta1.RemoveDatapointsResponse}.
+   *   The first element of the array is an object representing {@link google.cloud.aiplatform.v1beta1.RemoveDatapointsResponse | RemoveDatapointsResponse}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -2285,7 +2303,7 @@ export class IndexServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is Array of [Index]{@link google.cloud.aiplatform.v1beta1.Index}.
+   *   The first element of the array is Array of {@link google.cloud.aiplatform.v1beta1.Index | Index}.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed and will merge results from all the pages into this array.
    *   Note that it can affect your quota.
@@ -2393,7 +2411,7 @@ export class IndexServiceClient {
    * @param {object} [options]
    *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
    * @returns {Stream}
-   *   An object stream which emits an object representing [Index]{@link google.cloud.aiplatform.v1beta1.Index} on 'data' event.
+   *   An object stream which emits an object representing {@link google.cloud.aiplatform.v1beta1.Index | Index} on 'data' event.
    *   The client library will perform auto-pagination by default: it will call the API as many
    *   times as needed. Note that it can affect your quota.
    *   We recommend using `listIndexesAsync()`
@@ -2451,7 +2469,7 @@ export class IndexServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Index]{@link google.cloud.aiplatform.v1beta1.Index}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.aiplatform.v1beta1.Index | Index}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -2493,16 +2511,16 @@ export class IndexServiceClient {
    *   OPTIONAL: A `GetPolicyOptions` object for specifying options to
    *   `GetIamPolicy`. This field is only used by Cloud IAM.
    *
-   *   This object should have the same structure as [GetPolicyOptions]{@link google.iam.v1.GetPolicyOptions}
+   *   This object should have the same structure as {@link google.iam.v1.GetPolicyOptions | GetPolicyOptions}.
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
-   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html} for the details.
+   *   retries, paginations, etc. See {@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html | gax.CallOptions} for the details.
    * @param {function(?Error, ?Object)} [callback]
    *   The function which will be called with the result of the API call.
    *
-   *   The second parameter to the callback is an object representing [Policy]{@link google.iam.v1.Policy}.
+   *   The second parameter to the callback is an object representing {@link google.iam.v1.Policy | Policy}.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Policy]{@link google.iam.v1.Policy}.
+   *   The first element of the array is an object representing {@link google.iam.v1.Policy | Policy}.
    *   The promise has a method named "cancel" which cancels the ongoing API call.
    */
   getIamPolicy(
@@ -2544,13 +2562,13 @@ export class IndexServiceClient {
    *   [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
-   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html} for the details.
+   *   retries, paginations, etc. See {@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html | gax.CallOptions} for the details.
    * @param {function(?Error, ?Object)} [callback]
    *   The function which will be called with the result of the API call.
    *
-   *   The second parameter to the callback is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The second parameter to the callback is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The first element of the array is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    *   The promise has a method named "cancel" which cancels the ongoing API call.
    */
   setIamPolicy(
@@ -2592,13 +2610,13 @@ export class IndexServiceClient {
    *   [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @param {Object} [options]
    *   Optional parameters. You can override the default settings for this call, e.g, timeout,
-   *   retries, paginations, etc. See [gax.CallOptions]{@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html} for the details.
+   *   retries, paginations, etc. See {@link https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html | gax.CallOptions} for the details.
    * @param {function(?Error, ?Object)} [callback]
    *   The function which will be called with the result of the API call.
    *
-   *   The second parameter to the callback is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The second parameter to the callback is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [TestIamPermissionsResponse]{@link google.iam.v1.TestIamPermissionsResponse}.
+   *   The first element of the array is an object representing {@link google.iam.v1.TestIamPermissionsResponse | TestIamPermissionsResponse}.
    *   The promise has a method named "cancel" which cancels the ongoing API call.
    *
    */
@@ -2628,9 +2646,9 @@ export class IndexServiceClient {
    * @param {string} request.name
    *   Resource name for the location.
    * @param {object} [options]
-   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html|CallOptions} for more details.
+   *   Call options. See {@link https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html | CallOptions} for more details.
    * @returns {Promise} - The promise which resolves to an array.
-   *   The first element of the array is an object representing [Location]{@link google.cloud.location.Location}.
+   *   The first element of the array is an object representing {@link google.cloud.location.Location | Location}.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods)
    *   for more details and examples.
@@ -2680,7 +2698,7 @@ export class IndexServiceClient {
    * @returns {Object}
    *   An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
    *   When you iterate the returned iterable, each element will be an object representing
-   *   [Location]{@link google.cloud.location.Location}. The API will be called under the hood as needed, once per the page,
+   *   {@link google.cloud.location.Location | Location}. The API will be called under the hood as needed, once per the page,
    *   so you can stop the iteration when you don't need more results.
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
@@ -2709,20 +2727,18 @@ export class IndexServiceClient {
    * @param {string} request.name - The name of the operation resource.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   *   details.
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   *   for the details.
    * @param {function(?Error, ?Object)=} callback
    *   The function which will be called with the result of the API call.
    *
    *   The second parameter to the callback is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}.
+   *   {@link google.longrunning.Operation | google.longrunning.Operation}.
    * @return {Promise} - The promise which resolves to an array.
    *   The first element of the array is an object representing
-   * [google.longrunning.Operation]{@link
-   * external:"google.longrunning.Operation"}. The promise has a method named
-   * "cancel" which cancels the ongoing API call.
+   * {@link google.longrunning.Operation | google.longrunning.Operation}.
+   * The promise has a method named "cancel" which cancels the ongoing API call.
    *
    * @example
    * ```
@@ -2766,11 +2782,11 @@ export class IndexServiceClient {
    *   resources in a page.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   *   e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   *   e.g, timeout, retries, paginations, etc. See {@link
+   *   https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    *   details.
    * @returns {Object}
-   *   An iterable Object that conforms to @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols.
+   *   An iterable Object that conforms to {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols | iteration protocols}.
    *
    * @example
    * ```
@@ -2801,8 +2817,8 @@ export class IndexServiceClient {
    * @param {string} request.name - The name of the operation resource to be cancelled.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions} for the
    * details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
@@ -2844,9 +2860,9 @@ export class IndexServiceClient {
    * @param {string} request.name - The name of the operation resource to be deleted.
    * @param {Object=} options
    *   Optional parameters. You can override the default settings for this call,
-   * e.g, timeout, retries, paginations, etc. See [gax.CallOptions]{@link
-   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions} for the
-   * details.
+   * e.g, timeout, retries, paginations, etc. See {@link
+   * https://googleapis.github.io/gax-nodejs/global.html#CallOptions | gax.CallOptions}
+   * for the details.
    * @param {function(?Error)=} callback
    *   The function which will be called with the result of the API call.
    * @return {Promise} - The promise which resolves when API call finishes.
@@ -4467,6 +4483,130 @@ export class IndexServiceClient {
     return this.pathTemplates.modelEvaluationSlicePathTemplate.match(
       modelEvaluationSliceName
     ).slice;
+  }
+
+  /**
+   * Return a fully-qualified nasJob resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} nas_job
+   * @returns {string} Resource name string.
+   */
+  nasJobPath(project: string, location: string, nasJob: string) {
+    return this.pathTemplates.nasJobPathTemplate.render({
+      project: project,
+      location: location,
+      nas_job: nasJob,
+    });
+  }
+
+  /**
+   * Parse the project from NasJob resource.
+   *
+   * @param {string} nasJobName
+   *   A fully-qualified path representing NasJob resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromNasJobName(nasJobName: string) {
+    return this.pathTemplates.nasJobPathTemplate.match(nasJobName).project;
+  }
+
+  /**
+   * Parse the location from NasJob resource.
+   *
+   * @param {string} nasJobName
+   *   A fully-qualified path representing NasJob resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromNasJobName(nasJobName: string) {
+    return this.pathTemplates.nasJobPathTemplate.match(nasJobName).location;
+  }
+
+  /**
+   * Parse the nas_job from NasJob resource.
+   *
+   * @param {string} nasJobName
+   *   A fully-qualified path representing NasJob resource.
+   * @returns {string} A string representing the nas_job.
+   */
+  matchNasJobFromNasJobName(nasJobName: string) {
+    return this.pathTemplates.nasJobPathTemplate.match(nasJobName).nas_job;
+  }
+
+  /**
+   * Return a fully-qualified nasTrialDetail resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} nas_job
+   * @param {string} nas_trial_detail
+   * @returns {string} Resource name string.
+   */
+  nasTrialDetailPath(
+    project: string,
+    location: string,
+    nasJob: string,
+    nasTrialDetail: string
+  ) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.render({
+      project: project,
+      location: location,
+      nas_job: nasJob,
+      nas_trial_detail: nasTrialDetail,
+    });
+  }
+
+  /**
+   * Parse the project from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).project;
+  }
+
+  /**
+   * Parse the location from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).location;
+  }
+
+  /**
+   * Parse the nas_job from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the nas_job.
+   */
+  matchNasJobFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).nas_job;
+  }
+
+  /**
+   * Parse the nas_trial_detail from NasTrialDetail resource.
+   *
+   * @param {string} nasTrialDetailName
+   *   A fully-qualified path representing NasTrialDetail resource.
+   * @returns {string} A string representing the nas_trial_detail.
+   */
+  matchNasTrialDetailFromNasTrialDetailName(nasTrialDetailName: string) {
+    return this.pathTemplates.nasTrialDetailPathTemplate.match(
+      nasTrialDetailName
+    ).nas_trial_detail;
   }
 
   /**

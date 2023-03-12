@@ -1,5 +1,33 @@
 # Changelog
 
+## [4.6.0](https://github.com/googleapis/google-cloud-node/compare/admin-v4.5.1...admin-v4.6.0) (2023-02-28)
+
+
+### Features
+
+* [analytics-admin] add `CreateAccessBinding`, `GetAccessBinding`, `UpdateAccessBinding`, `DeleteAccessBinding`, `ListAccessBindings`, `BatchCreateAccessBindings`, `BatchGetAccessBindings`, `BatchUpdateAccessBindings`, `BatchDeleteAccessBindings` m... ([#4001](https://github.com/googleapis/google-cloud-node/issues/4001)) ([2dd56a7](https://github.com/googleapis/google-cloud-node/commit/2dd56a77bc7bfcbfbbb5ba4beed27d918068fc79))
+
+## [4.5.1](https://github.com/googleapis/google-cloud-node/compare/admin-v4.5.0...admin-v4.5.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* [Many APIs] changing format of the jsdoc links ([#3985](https://github.com/googleapis/google-cloud-node/issues/3985)) ([fb2a6fd](https://github.com/googleapis/google-cloud-node/commit/fb2a6fdbd9dcf2ae91b3767629d71f0970d0712c))
+
+## [4.5.0](https://github.com/googleapis/google-cloud-node/compare/admin-v4.4.0...admin-v4.5.0) (2023-02-09)
+
+
+### Features
+
+* [analytics-admin] add `GetSearchAds360Link`, `ListSearchAds360Links`, `CreateSearchAds360Link`, `DeleteSearchAds360Link`, `UpdateSearchAds360Link` methods to the Admin API v1alpha ([#3971](https://github.com/googleapis/google-cloud-node/issues/3971)) ([4834b82](https://github.com/googleapis/google-cloud-node/commit/4834b822552f4b1affdb23085ff78715975b72d1))
+
+## [4.4.0](https://github.com/googleapis/google-cloud-node/compare/admin-v4.3.1...admin-v4.4.0) (2023-01-28)
+
+
+### Features
+
+* Added Snooze API support ([#3832](https://github.com/googleapis/google-cloud-node/issues/3832)) ([f715797](https://github.com/googleapis/google-cloud-node/commit/f715797a46cdd2bf4dffc1a82378986941fd6d79))
+
 ## [4.3.1](https://github.com/googleapis/google-cloud-node/compare/admin-v4.3.0...admin-v4.3.1) (2022-12-16)
 
 

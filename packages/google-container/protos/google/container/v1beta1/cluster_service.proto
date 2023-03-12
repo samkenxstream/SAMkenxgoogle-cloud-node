@@ -286,6 +286,16 @@ service ClusterManager {
     option (google.api.method_signature) = "project_id,zone";
   }
 
+  // Gets the public component of the cluster signing keys in
+  // JSON Web Key format.
+  // This API is not yet intended for general use, and is not available for all
+  // clusters.
+  rpc GetJSONWebKeys(GetJSONWebKeysRequest) returns (GetJSONWebKeysResponse) {
+    option (google.api.http) = {
+      get: "/v1beta1/{parent=projects/*/locations/*/clusters/*}/jwks"
+    };
+  }
+
   // Lists the node pools for a cluster.
   rpc ListNodePools(ListNodePoolsRequest) returns (ListNodePoolsResponse) {
     option (google.api.http) = {
@@ -295,16 +305,6 @@ service ClusterManager {
       }
     };
     option (google.api.method_signature) = "project_id,zone,cluster_id";
-  }
-
-  // Gets the public component of the cluster signing keys in
-  // JSON Web Key format.
-  // This API is not yet intended for general use, and is not available for all
-  // clusters.
-  rpc GetJSONWebKeys(GetJSONWebKeysRequest) returns (GetJSONWebKeysResponse) {
-    option (google.api.http) = {
-      get: "/v1beta1/{parent=projects/*/locations/*/clusters/*}/jwks"
-    };
   }
 
   // Retrieves the requested node pool.
@@ -1004,7 +1004,7 @@ message ReservationAffinity {
   repeated string values = 3;
 }
 
-// Kubernetes taint is comprised of three fields: key, value, and effect. Effect
+// Kubernetes taint is composed of three fields: key, value, and effect. Effect
 // can only be one of three types:  NoSchedule, PreferNoSchedule or NoExecute.
 //
 // See
@@ -3456,7 +3456,9 @@ message NodePool {
   // [Output only] Server-defined URL for the resource.
   string self_link = 100;
 
-  // The version of the Kubernetes of this node.
+  // The version of Kubernetes running on this NodePool's nodes. If unspecified,
+  // it defaults as described
+  // [here](https://cloud.google.com/kubernetes-engine/versioning#specifying_node_version).
   string version = 101;
 
   // [Output only] The resource URLs of the [managed instance
@@ -3850,8 +3852,7 @@ message AutoprovisioningNodePoolDefaults {
   // information, read [how to specify min CPU
   // platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
   // This field is deprecated, min_cpu_platform should be specified using
-  // https://cloud.google.com/requested-min-cpu-platform label selector on the
-  // pod.
+  // `cloud.google.com/requested-min-cpu-platform` label selector on the pod.
   // To unset the min cpu platform field pass "automatic"
   // as field value.
   string min_cpu_platform = 5 [deprecated = true];
@@ -4817,7 +4818,7 @@ enum PrivateIPv6GoogleAccess {
   // Enables private IPv6 access to Google Services from GKE
   PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE = 2;
 
-  // Enables priate IPv6 access to and from Google Services
+  // Enables private IPv6 access to and from Google Services
   PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL = 3;
 }
 
